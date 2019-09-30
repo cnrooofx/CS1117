@@ -1,0 +1,241 @@
+item 8
+*PyCharm*
+~~~~~~~~~
+
+/usr/bin/python3.6 /users/2023/cf26/PycharmProjects/CS1117Lab1_lecture2/average_ages.py
+Please enter age 1: 2
+Please enter age 2: 4
+The average age is 3
+
+Process finished with exit code 0
+
+*Terminal*
+~~~~~~~~~~
+
+cf26@csg20-55:~/PycharmProjects/CS1117Lab1_lecture2$ python3 ./average_ages.py
+Please enter age 1: 2
+Please enter age 2: 4
+The average age is 3
+cf26@csg20-55:~/PycharmProjects/CS1117Lab1_lecture2$
+
+
+item 9
+*PyCharm - With errors*
+~~~~~~~~~~~~~~~~~~~~~~~
+
+/usr/bin/python3.6 /users/2023/cf26/PycharmProjects/CS1117Lab1_lecture2/average_ages.py
+Please enter age 1: 2
+Please enter age 2: 4
+Traceback (most recent call last):
+  File "/users/2023/cf26/PycharmProjects/CS1117Lab1_lecture2/average_ages.py", line 12, in <module>
+    average = (age1+age2)/2
+NameError: name 'age1' is not defined
+
+Process finished with exit code 1
+
+*Terminal - With errors*
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+cf26@csg20-55:~/PycharmProjects/CS1117Lab1_lecture2$ python3 ./average_ages.py
+Please enter age 1: 2
+Please enter age 2: 4
+Traceback (most recent call last):
+  File "./average_ages.py", line 12, in <module>
+    average = (age1+age2)/2
+NameError: name 'age1' is not defined
+cf26@csg20-55:~/PycharmProjects/CS1117Lab1_lecture2$
+
+item 11
+* What is my name - Code*
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+# Script Name: what_is_my_name.py
+# Author: Conor Fox 119322236
+
+'''
+Pseudocode
+
+Input
+    ask user to enter first name
+    ask user to enter second name
+
+Output
+    print hello <firstname> <lastname>
+
+'''
+
+first_name = str(input("What is your first name?"))
+last_name = str(input("What is your last name?"))
+
+print("Hello", first_name, last_name)
+
+* What is my name - Output*
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+/usr/bin/python3.6 /users/2023/cf26/PycharmProjects/CS1117Lab1_lecture2/what_is_my_name.py
+What is your first name?Conor
+What is your last name?Fox
+Hello Conor Fox
+
+Process finished with exit code 0
+
+item 12
+*Error Checking 1*
+~~~~~~~~~~~~~~~~~~
+
+There are no brackets after print
+
+Is there a bug here (Y/N): Y
+What is the output?
+/usr/bin/python3.6 /users/2023/cf26/PycharmProjects/CS1117Lab1_lecture2/bugs.py
+  File "/users/2023/cf26/PycharmProjects/CS1117Lab1_lecture2/bugs.py", line 3
+    print number
+               ^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print(number)?
+
+Process finished with exit code 1
+
+--------------------------Original Code------------------------
+
+number = 99
+song = 'red balloons'
+print number
+print song
+
+-------------------------Changed Code-------------------------
+
+number = 99
+song = 'red balloons'
+print(number)
+print(song)
+
+-------------------------Changed Code Output-------------------------
+
+/usr/bin/python3.6 /users/2023/cf26/PycharmProjects/CS1117Lab1_lecture2/bugs.py
+99
+red balloons
+
+Process finished with exit code 0
+
+------------------------------------------------------
+
+*Error Checking 2*
+~~~~~~~~~~~~~~~~~~
+
+The variable 'number' is empty so the print will be empty
+
+Is there a bug here (Y/N): Y
+What is the output?
+/usr/bin/python3.6 /users/2023/cf26/PycharmProjects/CS1117Lab1_lecture2/bugs.py
+  File "/users/2023/cf26/PycharmProjects/CS1117Lab1_lecture2/bugs.py", line 1
+    number =
+            ^
+SyntaxError: invalid syntax
+
+Process finished with exit code 1
+
+--------------------------Original Code------------------------
+
+number =
+print(number)
+
+-------------------------Changed Code------------------------------------------------------
+
+number = 13
+print(number)
+
+-------------------------Changed Code Output-----------------------------
+
+/usr/bin/python3.6 /users/2023/cf26/PycharmProjects/CS1117Lab1_lecture2/bugs.py
+13
+
+Process finished with exit code 0
+
+------------------------------------------------------
+
+*Error Checking 3*
+~~~~~~~~~~~~~~~~~~
+
+There is a semicolon after 4 and class is a reserved name and there's a space between print and the brackets
+
+Is there a bug here (Y/N): Y
+What is the output?
+/usr/bin/python3.6 /users/2023/cf26/PycharmProjects/CS1117Lab1_lecture2/bugs.py
+  File "/users/2023/cf26/PycharmProjects/CS1117Lab1_lecture2/bugs.py", line 1
+    class = 4;
+          ^
+SyntaxError: invalid syntax
+
+Process finished with exit code 1
+
+------------------------Original Code------------------------------
+
+class = 4;
+print (class)
+
+-------------------------Changed Code-----------------------------
+
+classes = 4
+print(classes)
+
+-------------------------Changed Code Output-----------------------------
+
+/usr/bin/python3.6 /users/2023/cf26/PycharmProjects/CS1117Lab1_lecture2/bugs.py
+4
+
+Process finished with exit code 0
+
+--------------------------------------------------
+
+*Error Checking 4*
+~~~~~~~~~~~~~~~~~~
+
+Variable number and num are different
+
+Is there a bug here (Y/N): Y
+What is the output?
+/usr/bin/python3.6 /users/2023/cf26/PycharmProjects/CS1117Lab1_lecture2/bugs.py
+Traceback (most recent call last):
+  File "/users/2023/cf26/PycharmProjects/CS1117Lab1_lecture2/bugs.py", line 2, in <module>
+    print ( type(num) )
+NameError: name 'num' is not defined
+
+Process finished with exit code 1
+
+------------------------Original Code------------------------------
+
+number = 55
+print ( type(num) )
+
+------------------------Changed Code------------------------------
+
+number = 55
+print(type(number))
+
+------------------------Changed Code Output------------------------------
+
+/usr/bin/python3.6 /users/2023/cf26/PycharmProjects/CS1117Lab1_lecture2/bugs.py
+<class 'int'>
+
+Process finished with exit code 0
+
+------------------------------------------------------
+
+*Error Checking 5*
+~~~~~~~~~~~~~~~~~~
+
+
+
+Is there a bug here (Y/N): N
+What is the output?
+/usr/bin/python3.6 /users/2023/cf26/PycharmProjects/CS1117Lab1_lecture2/bugs.py
+0
+
+Process finished with exit code 0
+
+----------------------Original Code--------------------------------
+
+_number = 0
+print ( _number )
+
+------------------------------------------------------
