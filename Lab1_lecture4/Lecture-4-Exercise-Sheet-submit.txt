@@ -1,0 +1,133 @@
+item 5
+
+* What is my name *
+~~~~~~~~~~~~~~~~~~~
+
+# Script Name: what_is_my_name.py
+# Author: Conor Fox 119322236
+
+def what_is_my_name(question):
+    '''
+    Take input from user, cast to string and format to all lowercase then capitalise first letter.
+    :param question: Question to be asked to user
+    :return: Returns a string in lowercase with first letter capitalised.
+    '''
+    name = str(input(question))
+    name = name.lower()
+    name = name.capitalize()
+    return name
+
+first_name = what_is_my_name("What is your first name?")
+last_name = what_is_my_name("What is your last name?")
+
+print("Hello", first_name, last_name)
+
+---------------Output---------------
+
+Conor@conor CS1117Lab1_lecture4 % python3 what_is_my_name.py
+What is your first name?cOnOr
+What is your last name?FOX
+Hello Conor Fox
+
+
+item 6
+
+* What is my type? *
+~~~~~~~~~~~~~~~~~~~~
+
+# Script Name: what_is_my_type.py
+# Author: Conor Fox 119322236
+
+
+def what_is_my_type(inputValue):
+    '''
+    Takes an input, finds both type and id and returns them
+    :param inputValue: Takes a value to find the id and type
+    :return: Returns the type and id of the inputted value
+
+    '''
+    what_type = type(inputValue)
+    what_id = id(inputValue)
+    return inputValue, what_type, what_id
+
+# This is the value to find the type and id
+input_Value = "7"
+
+# Assign the 3 outputs from the function to variables
+inputValue, what_type, what_id = what_is_my_type(input_Value)
+
+# Print the
+print("The value", "\"", inputValue, "\"", "is type", what_type, "and has the id", what_id)
+
+---------------Output---------------
+
+cf26@csg20-17:~/PycharmProjects/CS1117Lab1_lecture4$ python3 what_is_my_type.py
+The value " 7 " is type <class 'str'> and has the id 140485544437776
+
+
+item 7
+
+* Error Checking *
+~~~~~~~~~~~~~~~~~~
+
+Is there a bug here (Y/N): Y
+What is the output?
+cf26@csg20-17:~/PycharmProjects/CS1117Lab1_lecture4$ python3 bugs.py
+  File "bugs.py", line 3
+    ''' I'm a comment '''
+        ^
+SyntaxError: invalid syntax
+
+---------------Original Code---------------
+
+# I'm a comment
+''' I'm a comment
+''' I'm a comment '''
+""" I'm a comment """
+age = 7 # I'm a comment
+def a_function:
+    return a_parameter
+
+def a_function()
+    return "a_parameter"
+
+def a_function(a_parameter) :
+    return a_parameter
+
+def a_function(a_parameter a_second_parameter):
+    return a_parameter
+    print(a_second_parameter)
+
+---------------Changed Code---------------
+
+# I'm a comment
+''' I'm a comment '''
+''' I'm a comment '''
+""" I'm a comment """
+
+age = 7  # I'm a comment
+
+
+def a_function(a_parameter):
+    return a_parameter
+
+
+def another_function(another_parameter):
+    return another_parameter
+
+
+def again_another_function(third_parameter):
+    return third_parameter
+
+
+def a_function(a_parameter, a_second_parameter):
+    print(a_second_parameter)
+    return a_parameter
+
+---------------Changed Code Output---------------
+
+/usr/bin/python3.6 /users/2023/cf26/PycharmProjects/CS1117Lab1_lecture4/bugs.py
+
+Process finished with exit code 0
+
+------------------------------

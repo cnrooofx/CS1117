@@ -1,0 +1,99 @@
+item 3
+* What is my type? *
+~~~~~~~~~~~~~~~~~~~~
+
+# Script Name: what_is_my_type.py
+# Author: Conor Fox 119322236
+
+what_is_my_type = 2019
+what_type = type(what_is_my_type)
+print("Variable", "\"", what_is_my_type, "\"", "is", what_type)
+
+what_is_my_type = 29.99
+what_type = type(what_is_my_type)
+print("Variable", "\"", what_is_my_type, "\"", "is", what_type)
+
+what_is_my_type = "Hello my name is Conor"
+what_type = type(what_is_my_type)
+print("Variable", "\"", what_is_my_type, "\"", "is", what_type)
+
+what_is_my_type = ("alpha", "beta", "gamma")
+what_type = type(what_is_my_type)
+print("Variable", "\"", what_is_my_type, "\"", "is", what_type)
+
+---------------Output---------------
+
+Conor@conor CS1117Lab1_lecture3 % python3 what_is_my_type.py
+Variable " 2019 " is <class 'int'>
+Variable " 29.99 " is <class 'float'>
+Variable " Hello my name is Conor " is <class 'str'>
+Variable " ('alpha', 'beta', 'gamma') " is <class 'tuple'>
+
+item 4
+* Camel & Pascal Case *
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Camel case is when there are no spaces between words and the first letter of every word is capitalised except the first word.
+Pascal case is when when there are no spaces between words and the first letter of every word is capitalised.
+Camel is generally used for naming classes and Pascal for naming variables
+
+item 5
+* Error Checking *
+~~~~~~~~~~~~~~~~~~
+
+There are '#' symbols on lines that shouldn't be comments,
+'assert' and 'del' are reserved names,
+'7_days_a_week' starts with a number,
+Extra bracket after second last 'print'
+
+Is there a bug here (Y/N): Y
+What is the output?
+Conor@conor CS1117Lab1_lecture3 % python3 bugs.py
+  File "bugs.py", line 2
+    assert = "compliant"
+           ^
+SyntaxError: invalid syntax
+
+--------------------Original Code---------------------------
+
+# add the code here
+assert = "compliant"
+del= 'delete'
+tuple = ('am','I','a','tuple')
+7_days_a_week = "I code"
+howfartothenextfoodshop = "2 minutes’ walk"
+mixture#5 = "soup"
+
+print(assert)
+print(del)
+print(tuple)
+print(7_days_a_week)
+print(howfartothenextfoodshop))
+print(mixture#5)
+
+--------------------Changed Code---------------------------
+
+# add the code here
+ai = "compliant"
+bugs = 'delete'
+tuple = ('am','I','a','tuple')
+seven_days_a_week = "I code"
+howfartothenextfoodshop = "2 minutes’ walk"
+mixture_5 = "soup"
+
+print(ai)
+print(bugs)
+print(tuple)
+print(seven_days_a_week)
+print(howfartothenextfoodshop)
+print(mixture_5)
+
+--------------------Changed Code Output---------------------------
+
+Conor@conor CS1117Lab1_lecture3 % python3 bugs.py
+compliant
+delete
+('am', 'I', 'a', 'tuple')
+I code
+2 minutes’ walk
+soup
