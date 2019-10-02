@@ -9,12 +9,10 @@ def separated_input(string1, string2, sep_string_value, end_string_value):
     :sep_string_value: str -- Value to assign to sep
     :end_string_value: str -- Value to assign to end
     """
-    string1 = str(string1.lower())
-    string1 = str(string1.capitalize())
-    string2 = str(string2.lower())
-    string2 = str(string2.capitalize())
-    sep_string_value = str(sep_string_value.lower())
-    sep_string_value = str(sep_string_value.capitalize())
+    string1 = str(string1.lower().capitalize())
+    string2 = str(string2.lower().capitalize())
+    sep_string_value = str(sep_string_value.lower().capitalize())
+    end_string_value = str(end_string_value.lower().capitalize())
 
     print(string1+" ", string2+" ", sep=sep_string_value+" ", end=end_string_value)
 
