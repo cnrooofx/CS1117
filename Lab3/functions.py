@@ -36,7 +36,8 @@ def seasons(number):
 
 def grades(score):
     """
-
+    Gives grade based on test score
+    score -- Test score between 0 and 100
     """
     if score >= 0 and score <= 24:
         print("F")

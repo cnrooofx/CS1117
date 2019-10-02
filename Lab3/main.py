@@ -5,7 +5,7 @@ import functions
 
 
 def main():
-    functions.fizz_buzz(8)
+    functions.three_numbers("one", "two", "three")
 
 
 if __name__ == '__main__':
