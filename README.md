@@ -22,3 +22,12 @@ Error Checking
   - separated\_input
 
 Error Checking
+
+## Lab 3
+
+- functions
+  - three\_numbers
+  - seasons
+  - grades
+  - equal\_numbers
+  - fizz\_buzz
