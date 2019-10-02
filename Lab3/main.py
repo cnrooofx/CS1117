@@ -1,22 +1,12 @@
-# ScriptName: main.py
-# Author: Jason Quinlan
+# Script Name: main.py
+# Author: Conor Fox 119322236
 
-# template for calling functions in another file
-
-# import functions from other files - different options
-# from functions import print_function
-# import functions - when you use this you need to call the function using 'functions.<function_name>'
-# this option imports all functions, using '*'
-from functions2 import *
+import functions
 
 
 def main():
-    """
-    Call the functions defined in the functions.py file
-    """
-    print_function()
+    functions.seasons(1)
 
 
-if __name__ == "__main__":
-    ''' call the main() function in this file '''
+if __name__ == '__main__':
     main()
