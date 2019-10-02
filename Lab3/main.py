@@ -5,7 +5,7 @@ import functions
 
 
 def main():
-    functions.seasons(1)
+    functions.fizz_buzz(8)
 
 
 if __name__ == '__main__':

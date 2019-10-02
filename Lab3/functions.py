@@ -1,6 +1,8 @@
 # Script Name: functions.py
 # Author: Conor Fox 119322236
 
+import math
+
 
 def three_numbers(num1, num2, num3):
     """
@@ -34,7 +36,7 @@ def seasons(number):
 
 def grades(score):
     """
-    
+
     """
     if score >= 0 and score <= 24:
         print("F")
@@ -49,7 +51,30 @@ def grades(score):
     elif score >= 85 and score <= 100:
         print("A")
     else:
-        print("Error enter a score between 0 and 100")
+        print("X")
 
 
 def equal_numbers(num1, num2):
+    if num1 == num2:
+        square_root = math.sqrt(num1)
+        print("The square root of %d is %d" % (int(num1), int(square_root)))
+    else:
+        square_num1 = num1 ** 2
+        square_num2 = num2 ** 2
+
+        print("\"%d\" squared is \"%d\" and \"%d\" squared is \"%d\"" % (num1, square_num1, num2, square_num2))
+
+
+def fizz_buzz(number):
+    """
+    Like game of FizzBuzz, if number is a multiple of 3 prints Fizz, if number is a multiple of 5 prints Buzz and if number is a multiple of both prints FizzBuzz
+    number -- Number to be inputted
+    """
+    if (number % 5) == 0 and (number % 3) == 0:
+        print("FizzBuzz")
+    elif (number % 3) == 0:
+        print("Fizz")
+    elif (number % 5) == 0:
+        print("Buzz")
+    else:
+        print(number)
