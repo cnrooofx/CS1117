@@ -24,9 +24,9 @@ def seasons(number):
 def grades(score):
     """
     Gives grade based on test score
-    score -- Test score between 0 and 100
+    score -- Test score between 0 and 100 or grade between A and F
     """
-    if str(type(score)) == "<class 'int'>":
+    if type(score) == int:
         if score >= 0 and score <= 24:
             print("F")
         elif score >= 25 and score <= 39:
@@ -42,7 +42,7 @@ def grades(score):
         else:
             print("The input numerical grade is outside the supported range.")
 
-    elif str(type(score)) == "<class 'str'>":
+    elif type(score) == str:
         if score == "F":
             print("0-24")
         elif score == "E":
@@ -58,15 +58,19 @@ def grades(score):
         else:
             print("The input letter grade is outside the supported range.")
     else:
-        print("Error - please enter an integer between 0 and 100 or a letter between A and F")
+        print("Error - please enter an integer 0 - 100 or a letter A - F")
 
 
 def fizz_buzz(number, divisor_1, divisor_2):
     """
-    Like game of FizzBuzz, if number is a multiple of 3 prints Fizz, if number is a multiple of 5 prints Buzz and if number is a multiple of both prints FizzBuzz
+    Like game of FizzBuzz, if number is a multiple of 'divisor_1'
+    prints Fizz, if number is a multiple of 'divisor_2' prints Buzz
+    and if number is a multiple of both prints FizzBuzz.
     number -- Number to be inputted
+    divisor_1 -- First number to be used as divisor
+    divisor_2 -- Second number to be used as divisor
     """
-    if type(number) == int:  # str(type(number)) == "<class 'int'>":
+    if type(number) == int:
         if (number % divisor_1) == 0 and (number % divisor_2) == 0:
             print("FizzBuzz")
         elif (number % divisor_1) == 0:
@@ -80,7 +84,13 @@ def fizz_buzz(number, divisor_1, divisor_2):
 
 
 def slice_reverse(input_value):
-    input_value = input_value.lower()
+    """
+    If the input value is a palindrome (spelt the same forwards and backwards)
+    then output is true, otherwise false.
+    input_value -- value to check if palindrome
+    """
+    input_value = str(input_value)
+    input_value.lower()
     if input_value == input_value[::-1]:
         print("True")
     else:
@@ -88,6 +98,13 @@ def slice_reverse(input_value):
 
 
 def add_to_list(value, the_list):
+    """
+    Compares a value to a list. If the value is not in the list, it is added
+    and the list is sorted. If the value isnt in the list then it is just
+    sorted and printed.
+    value -- Value to be compared
+    the_list -- List to check with value
+    """
     if value not in the_list:
         the_list.append(value)
     the_list.sort()
