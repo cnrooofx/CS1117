@@ -59,3 +59,21 @@ def grades(score):
             print("The input letter grade is outside the supported range.")
     else:
         print("Error - please enter an integer between 0 and 100 or a letter between A and F")
+
+
+def fizz_buzz(number, divisor_1, divisor_2):
+    """
+    Like game of FizzBuzz, if number is a multiple of 3 prints Fizz, if number is a multiple of 5 prints Buzz and if number is a multiple of both prints FizzBuzz
+    number -- Number to be inputted
+    """
+    if str(type(number)) == "<class 'int'>":
+        if (number % divisor_1) == 0 and (number % divisor_2) == 0:
+            print("FizzBuzz")
+        elif (number % divisor_1) == 0:
+            print("Fizz")
+        elif (number % divisor_2) == 0:
+            print("Buzz")
+        else:
+            print(number)
+    else:
+        print("Error - Input is not an integer")
