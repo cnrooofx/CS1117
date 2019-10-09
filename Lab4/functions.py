@@ -66,7 +66,7 @@ def fizz_buzz(number, divisor_1, divisor_2):
     Like game of FizzBuzz, if number is a multiple of 3 prints Fizz, if number is a multiple of 5 prints Buzz and if number is a multiple of both prints FizzBuzz
     number -- Number to be inputted
     """
-    if str(type(number)) == "<class 'int'>":
+    if type(number) == int:  # str(type(number)) == "<class 'int'>":
         if (number % divisor_1) == 0 and (number % divisor_2) == 0:
             print("FizzBuzz")
         elif (number % divisor_1) == 0:
@@ -85,3 +85,10 @@ def slice_reverse(input_value):
         print("True")
     else:
         print("False")
+
+
+def add_to_list(value, the_list):
+    if value not in the_list:
+        the_list.append(value)
+    the_list.sort()
+    print(the_list)

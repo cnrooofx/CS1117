@@ -32,8 +32,12 @@ def main():
     functions.fizz_buzz(20, 10, 6)
     functions.fizz_buzz(81, 8, 9)
     '''
+    '''
     functions.slice_reverse("Racecar")
     functions.slice_reverse("r", "o", "t", "a", "v", "a", "t", "o", "r”)
+    '''
+
+    functions.add_to_list("c", ["o", "n", "r"])
 
 
 if __name__ == "__main__":
