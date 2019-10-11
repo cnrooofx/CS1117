@@ -100,7 +100,7 @@ def slice_reverse(input_value):
 def add_to_list(value, the_list):
     """
     Compares a value to a list. If the value is not in the list, it is added
-    and the list is sorted. If the value isnt in the list then it is just
+    and the list is sorted. If the value isn't in the list then it is just
     sorted and printed.
     value -- Value to be compared
     the_list -- List to check with value
