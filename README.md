@@ -31,3 +31,12 @@ Error Checking
   - grades
   - equal\_numbers
   - fizz\_buzz
+
+## Lab 4
+
+- functions
+  - seasons - revised
+  - grades - revised
+  - fizz_buzz - revised
+  - slice\_reverse
+  - add\_to\_list
