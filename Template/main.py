@@ -1,4 +1,4 @@
-# ScriptName: main.py
+# Script Name: main.py
 # Author: Conor Fox 119322236
 
 import functions
