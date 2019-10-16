@@ -1,11 +1,11 @@
-# ScriptName: main.py
+# Script Name: main.py
 # Author: Conor Fox 119322236
 
 import functions
 
 
 def main():
-    functions.while_loop_v4(15)
+    functions.while_loop()
 
 
 if __name__ == "__main__":
