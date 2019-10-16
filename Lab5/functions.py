@@ -3,6 +3,12 @@
 
 
 def while_loop(max_number=10, even=False, factorial=False):
+    """
+    Prints a list of numbers from 1 to max_number.
+    max_number -- The maximum number in the list.
+    even -- Only even numbers are printed
+    factorial -- The factorial of the highest number is added to the end.
+    """
     list1 = []
     i = 1
     accum = 0
@@ -20,7 +26,7 @@ def while_loop(max_number=10, even=False, factorial=False):
         if factorial is True:
             fact = pos_factorial(list1[-2])
             list1.append(fact)
-        print("The list is", list1)
+        print(list1)
     elif max_number <= 0:
         while i >= max_number:
             if even is True and i % 2 != 0:
@@ -37,6 +43,7 @@ def while_loop(max_number=10, even=False, factorial=False):
             print(fact)
             list1.append(fact)
         print(list1)
+    return list1
 
 
 def pos_factorial(inp):
