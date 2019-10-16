@@ -1,4 +1,4 @@
-# ScriptName: functions.py
+# Script Name: functions.py
 # Author: Conor Fox 119322236
 
 
