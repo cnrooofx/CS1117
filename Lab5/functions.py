@@ -1,10 +1,14 @@
 # Script Name: functions.py
 # Author: Conor Fox 119322236
 
-import math
-
 
 def while_loop(max_number=10, even=False, factorial=False):
+    """
+    Prints a list of numbers from 1 to max_number.
+    max_number -- The maximum number in the list.
+    even -- Only even numbers are printed
+    factorial -- The factorial of the highest number is added to the end.
+    """
     list1 = []
     i = 1
     accum = 0
@@ -20,7 +24,7 @@ def while_loop(max_number=10, even=False, factorial=False):
             i += 1
         list1.append(accum)
         if factorial is True:
-            fact = math.factorial(list1[-2])
+            fact = pos_factorial(list1[-2])
             list1.append(fact)
         print(list1)
     elif max_number <= 0:
@@ -35,6 +39,36 @@ def while_loop(max_number=10, even=False, factorial=False):
             i -= 1
         list1.append(accum)
         if factorial is True:
-            fact = math.factorial(abs(list1[-2]))
+            fact = neg_factorial(list1[-2])
+            print(fact)
             list1.append(fact)
         print(list1)
+    return list1
+
+
+def pos_factorial(inp):
+    """
+    Takes a positive number as input and returns the factorial.
+    inp -- Positive integer
+    return -- The factorial of the inputted number
+    """
+    i = 1
+    accum = 1
+    while i <= inp:
+        accum *= i
+        i += 1
+    return accum
+
+
+def neg_factorial(inp):
+    """
+    Takes a negative number as input and returns the factorial.
+    inp -- Negative integer
+    return -- The factorial of the inputted number5
+    """
+    i = -1
+    accum = 1
+    while i >= inp:
+        accum *= i
+        i -= 1
+    return accum
