@@ -40,3 +40,12 @@ Error Checking
   - fizz_buzz - revised
   - slice\_reverse
   - add\_to\_list
+
+## Lab 5
+
+- functions
+  - while\_loop
+
+- extra
+  - pos\_factorial
+  - neg\_factorial
