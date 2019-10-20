@@ -45,7 +45,6 @@ Error Checking
 
 - functions
   - while\_loop
-
 - extra
   - pos\_factorial
   - neg\_factorial
