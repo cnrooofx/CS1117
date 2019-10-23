@@ -6,7 +6,7 @@ import functions
 
 def main():
     '''
-    # functions.count([1, 2, 3, 4, 5, 2, 5, 2, 1], 2)
+    print(functions.count([1, 2, 3, 4, 5, 2, 5, 2, 1], 2))
     functions.index([1, 2, 3, 4, 5, 2, 5, 2, 1], 2)
     print(functions.index("hello", "o"))
     print(functions.index("hello", "p"))
@@ -19,13 +19,15 @@ def main():
     print(functions.insert(12345, 3, "p"))
     print(functions.value_in_list("hello", "o"))
     print(functions.value_in_list("hello", "p"))
-    '''
     print(functions.concat("hello", " world"))
     print(functions.concat(["hello"], ["world"]))
-    '''
     print(functions.remove("h", "hello"))
     print(functions.remove("p", "hello"))
+    print(functions.remove(3, [1, 2, 3, 4, 5, 6, 7, 8]))
     '''
+    print(functions.insert2([1, 2, 3, 4, 5, 2, 5, 2, 1], 2, 7))
+    print(functions.insert2([1, 2, 3, 4, 5, 2, 5, 2, 1], 12, 7))
+    print(functions.insert2(12345, 3, "p"))
 
 
 if __name__ == "__main__":
