@@ -137,14 +137,14 @@ def concat(list1, list2):  # F
     return -- Combined list
     """
     return list1 + list2
-    '''
+
     # I'm not sure how to use a while loop properly for this one
-    i = 0
-    while i < 1:
-        new_list = list1 + list2
-        i += 1
-    return new_list
-    '''
+    # i = 0
+    # while i < 1:
+    #     new_list = list1 + list2
+    #     i += 1
+    # return new_list
+
 
 
 def remove(value, list1):
