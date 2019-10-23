@@ -26,7 +26,7 @@ def grades(score):
     Gives grade based on test score
     score -- Test score between 0 and 100 or grade between A and F
     """
-    if type(score) == int:
+    if type(score) is int:
         if score >= 0 and score <= 24:
             print("F")
         elif score >= 25 and score <= 39:
@@ -42,7 +42,7 @@ def grades(score):
         else:
             print("The input numerical grade is outside the supported range.")
 
-    elif type(score) == str:
+    elif type(score) is str:
         if score == "F":
             print("0-24")
         elif score == "E":
@@ -70,7 +70,7 @@ def fizz_buzz(number, divisor_1, divisor_2):
     divisor_1 -- First number to be used as divisor
     divisor_2 -- Second number to be used as divisor
     """
-    if type(number) == int:
+    if type(number) is int:
         if (number % divisor_1) == 0 and (number % divisor_2) == 0:
             print("FizzBuzz")
         elif (number % divisor_1) == 0:
