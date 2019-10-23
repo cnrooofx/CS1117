@@ -48,3 +48,20 @@ Error Checking
 - extra
   - pos\_factorial
   - neg\_factorial
+  
+## Lab 6
+
+- count
+  - Return the number of times value occurs in the list.
+- index
+  - Returns the first index that value occurs at in the list.
+- get\_value
+  - Returns the value at the specified index
+- insert
+  - Adds a value to a list at a specified index value.
+- value\_in\_list
+  - Checks to see if value is in the list.
+- concat
+  - Returns a new list, which is a combination of list1 and list2.
+- remove
+  - Returns the list with the first occurrence of value removed from list.
