@@ -46,7 +46,7 @@ def index(list1, value):
 
 def get_value(list1, index):
     """
-    Returns the value at the specified index
+    Returns the value at the specified index.
     list1 -- The list
     index -- Index value to check
     return -- The value at index
@@ -109,7 +109,7 @@ def insert(list1, index, value):
 
 def value_in_list(list1, value):
     """
-    Checks to see if value is in list1.
+    Checks to see if value is in the list.
     list1 -- List
     value -- The value to check against list1
     return -- True if value in list1, False if not
@@ -144,7 +144,6 @@ def concat(list1, list2):  # F
     #     new_list = list1 + list2
     #     i += 1
     # return new_list
-
 
 
 def remove(value, list1):
