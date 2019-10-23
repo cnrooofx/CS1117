@@ -73,7 +73,7 @@ def insert(list1, index, value):
     return -- The list with value at the specified index
     """
     # Checks the type of the list
-    if type(list1) is str:
+    if isinstance(list1, str):
         i = 0
         # i goes through every index in the list
         while i < len(list1):
@@ -91,7 +91,7 @@ def insert(list1, index, value):
             # If index isn't in the list, value is added onto the end
             list1 = list1 + value
     # Checks the type of the list
-    elif type(list1) is list:
+    elif isinstance(list1, list):
         i = 0
         # i goes through every index in the list
         while i < len(list1):
