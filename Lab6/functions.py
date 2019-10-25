@@ -146,11 +146,11 @@ def concat(list1, list2):  # F
     # return new_list
 
 
-def remove(value, list1):
+def remove(list1, value):
     """
     Returns the list with the first occurrence of value removed from list.
-    value -- Value to remove
     list1 -- The list
+    value -- Value to remove
     return -- The list with first occurrence of value removed
     """
     i = 0
