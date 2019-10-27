@@ -129,7 +129,7 @@ def value_in_list(list1, value):
     return out
 
 
-def concat(list1, list2):  # F
+def concat(list1, list2):
     """
     Returns a new list, which is a combination of list1 and list2.
     list1 -- First list
@@ -137,13 +137,6 @@ def concat(list1, list2):  # F
     return -- Combined list
     """
     return list1 + list2
-
-    # I'm not sure how to use a while loop properly for this one
-    # i = 0
-    # while i < 1:
-    #     new_list = list1 + list2
-    #     i += 1
-    # return new_list
 
 
 def remove(list1, value):
