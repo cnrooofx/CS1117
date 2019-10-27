@@ -9,7 +9,7 @@ def while_loop(max_number=10, even=False, factorial=False):
     even -- Only even numbers are printed.
     factorial -- The factorial of the highest number is added to the end.
     """
-    list1 = []
+    numbers = []
     i = 1
     accum = 0
     if max_number > 0:
@@ -21,14 +21,14 @@ def while_loop(max_number=10, even=False, factorial=False):
             # Cutoff value is 12
             if i > 12:
                 break
-            list1.append(i)
+            numbers.append(i)
             accum += i
             i += 1
-        list1.append(accum)
+        numbers.append(accum)
         # Appends factorial of the highest value to the end of the list
         if factorial is True:
-            fact = pos_factorial(list1[-2])
-            list1.append(fact)
+            fact = pos_factorial(numbers[-2])
+            numbers.append(fact)
     elif max_number <= 0:
         while i >= max_number:
             # Skips odd numbers so only even numbers are printed
@@ -38,15 +38,15 @@ def while_loop(max_number=10, even=False, factorial=False):
             # Cutoff value is -12
             if i < -12:
                 break
-            list1.append(i)
+            numbers.append(i)
             accum += i
             i -= 1
-        list1.append(accum)
+        numbers.append(accum)
         # Appends factorial of the highest value to the end of the list
         if factorial is True:
-            fact = neg_factorial(list1[-2])
-            list1.append(fact)
-    return list1
+            fact = neg_factorial(numbers[-2])
+            numbers.append(fact)
+    return numbers
 
 
 def pos_factorial(inp):
