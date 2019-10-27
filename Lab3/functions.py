@@ -11,13 +11,14 @@ def three_numbers(num1, num2, num3):
     num2 -- Second imputted number
     num3 -- Third imputted number
     """
-    if str(type(num1)) == "<class 'int'>" and str(type(num2)) == "<class 'int'>" and str(type(num3)) == "<class 'int'>":
+    if isinstance(num1, int) and isinstance(num2, int) and isinstance(num3, int):
         if num1 == num2 == num3:
-            print("True")
+            out = True
         else:
-            print("False")
+            out = False
     else:
-        print("Error - Input is not an integer")
+        out = "Input is not an integer"
+    return out
 
 
 def seasons(number):
@@ -26,15 +27,16 @@ def seasons(number):
     number -- Between 1 and 4
     """
     if number == 1:
-        print("Spring")
+        out = "Spring"
     elif number == 2:
-        print("Summer")
+        out = "Summer"
     elif number == 3:
-        print("Autumn")
+        out = "Autumn"
     elif number == 4:
-        print("Winter")
+        out = "Winter"
     else:
-        print("Error - please enter an integer between 1 and 4")
+        out = "Please enter an integer between 1 and 4"
+    return out
 
 
 def grades(score):
@@ -42,23 +44,24 @@ def grades(score):
     Gives grade based on test score
     score -- Test score between 0 and 100
     """
-    if str(type(score)) == "<class 'int'>":
+    if isinstance(score, int):
         if score >= 0 and score <= 24:
-            print("F")
+            out = "F"
         elif score >= 25 and score <= 39:
-            print("E")
+            out = "E"
         elif score >= 40 and score <= 54:
-            print("D")
+            out = "D"
         elif score >= 55 and score <= 69:
-            print("C")
+            out = "C"
         elif score >= 70 and score <= 84:
-            print("B")
+            out = "B"
         elif score >= 85 and score <= 100:
-            print("A")
+            out = "A"
         else:
-            print("X")
+            out = "X"
     else:
-        print("Error - please enter an integer between 0 and 100")
+        out = "Error - please enter an integer between 0 and 100"
+    return out
 
 
 def equal_numbers(num1, num2):
@@ -67,19 +70,18 @@ def equal_numbers(num1, num2):
     num1 -- First imputted number
     num2 -- Second imputted number
     """
-    if str(type(num1)) == "<class 'int'>" and str(type(num2)) == "<class 'int'>":
+    if isinstance(num1, int) and isinstance(num2, int):
         if num1 == num2:
             square_root = math.sqrt(num1)
-            print("The square root of %d is %.3f" %
-                  (int(num1), float(square_root)))
+            out = "The square root of %d is %.3f" % (int(num1), float(square_root))
         else:
             square_num1 = num1 ** 2
             square_num2 = num2 ** 2
 
-            print("\"%d\" squared is \"%d\" and \"%d\" squared is \"%d\"" %
-                  (num1, square_num1, num2, square_num2))
+            out = "\"%d\" squared is \"%d\" and \"%d\" squared is \"%d\"" % (num1, square_num1, num2, square_num2)
     else:
-        print("Error - Input is not an integer")
+        out = "Error - Input is not an integer"
+    return out
 
 
 def fizz_buzz(number):
@@ -87,14 +89,15 @@ def fizz_buzz(number):
     Like game of FizzBuzz, if number is a multiple of 3 prints Fizz, if number is a multiple of 5 prints Buzz and if number is a multiple of both prints FizzBuzz
     number -- Number to be inputted
     """
-    if str(type(number)) == "<class 'int'>":
+    if isinstance(number, int):
         if (number % 5) == 0 and (number % 3) == 0:
-            print("FizzBuzz")
+            out = "FizzBuzz"
         elif (number % 3) == 0:
-            print("Fizz")
+            out = "Fizz"
         elif (number % 5) == 0:
-            print("Buzz")
+            out = "Buzz"
         else:
-            print(number)
+            out = number
     else:
-        print("Error - Input is not an integer")
+        out = "Error - Input is not an integer"
+    return out

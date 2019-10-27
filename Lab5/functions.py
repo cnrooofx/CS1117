@@ -29,7 +29,7 @@ def while_loop(max_number=10, even=False, factorial=False):
         if factorial is True:
             fact = pos_factorial(list1[-2])
             list1.append(fact)
-        print(list1)
+        return list1
     elif max_number <= 0:
         while i >= max_number:
             # Skips odd numbers so only even numbers are printed
@@ -46,17 +46,16 @@ def while_loop(max_number=10, even=False, factorial=False):
         # Appends factorial of the highest value to the end of the list
         if factorial is True:
             fact = neg_factorial(list1[-2])
-            print(fact)
             list1.append(fact)
-        print(list1)
+        return list1
     return list1
 
 
 def pos_factorial(inp):
     """
     Takes a positive number as input and returns the factorial.
-    inp -- Positive integer.
-    return -- The factorial of the inputted number.
+    inp -- Positive integer
+    return -- The factorial of the inputted number
     """
     i = 1
     accum = 1
@@ -70,7 +69,7 @@ def neg_factorial(inp):
     """
     Takes a negative number as input and returns the factorial.
     inp -- Negative integer
-    return -- The factorial of the inputted number5
+    return -- The factorial of the inputted number
     """
     i = -1
     accum = 1
