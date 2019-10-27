@@ -14,10 +14,8 @@ def count(list1, value):
     while i < len(list1):
         # Checks if value is in the list
         if value == list1[i]:
-            # If it is, adds 1 to accumulator and continues
+            # If it is, adds 1 to accumulator
             accum += 1
-            i += 1
-            continue
         # If it isn't, the next value in the list is checked
         i += 1
     return accum
