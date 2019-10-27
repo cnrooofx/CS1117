@@ -29,7 +29,6 @@ def while_loop(max_number=10, even=False, factorial=False):
         if factorial is True:
             fact = pos_factorial(list1[-2])
             list1.append(fact)
-        return list1
     elif max_number <= 0:
         while i >= max_number:
             # Skips odd numbers so only even numbers are printed
@@ -47,7 +46,6 @@ def while_loop(max_number=10, even=False, factorial=False):
         if factorial is True:
             fact = neg_factorial(list1[-2])
             list1.append(fact)
-        return list1
     return list1
 
 
