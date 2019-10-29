@@ -6,7 +6,7 @@ import functions
 
 def main():
     print(functions.is_stairs([1, 2, 3, 4, 5]))
-    print(functions.is_stairs([1, 2, 3, 5, 4]))
+    # print(functions.is_stairs([1, 2, 3, 5, 4]))
 
 
 if __name__ == "__main__":
