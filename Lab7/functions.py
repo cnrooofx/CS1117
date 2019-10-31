@@ -6,8 +6,8 @@ import random
 
 def is_stairs(s):
     """
-    Tests if the inputted list s is a stairs i.e. each number is one greater than
-    the previous number or each number is one smaller than the previous number.
+    Tests if the inputted list s is a stairs (each number is one greater than
+    the previous number or each number is one smaller than the previous number)
     s -- List
     return -- True if stairs, otherwise False
     """
@@ -50,7 +50,10 @@ def gremlins(name):
     dinnertime = True
     bright = False
     triplet = False
+    fate = ""
+    # Goes through the functions 5 times.
     for i in range(5):
+        # Random number to choose the function
         call = random.randint(1, 3)
         if call == 1:
             dinnertime = okay_to_feed(random.randint(0, 24))
@@ -64,20 +67,13 @@ def gremlins(name):
             wet = is_wet()
             if wet is True:
                 triplet = True
+    if bright is False and triplet is False:
+        fate = "rules!"
     if triplet is True:
-        triplet = "is a triplet"
-        bright = ""
-    else:
-        triplet = ""
+        fate = "is a triplet"
     if bright is True:
-        bright = " is no more"
-        triplet = ""
-    else:
-        bright = ""
-    if triplet is False and bright is False and dinnertime is True:
-        bright = ""
-        triplet = " rules!"
-    print(name, " ", triplet, bright ,sep="")
+        fate = "is no more"
+    print(name, fate)
 
 
 def is_wet():
