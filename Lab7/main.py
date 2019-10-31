@@ -29,9 +29,10 @@ def main():
     print(functions.factorial(0))  # ⇒ 1
     print(functions.factorial(40))
     print(functions.factorial(-10))
-    '''
     print(functions.is_wet())
-    print(range(4))
+    '''
+    functions.gremlins("Mogwai")
+
 
 
 if __name__ == "__main__":
