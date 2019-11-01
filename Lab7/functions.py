@@ -69,9 +69,9 @@ def gremlins(name):
                 triplet = True
     if bright is False and triplet is False:
         fate = "rules!"
-    if triplet is True:
+    elif triplet is True:
         fate = "is a triplet"
-    if bright is True:
+    elif bright is True:
         fate = "is no more"
     print(name, fate)
 
