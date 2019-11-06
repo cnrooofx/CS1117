@@ -75,7 +75,6 @@ def main():
 
     numGames = getNumberGames()
 
-
     '''
     #################################################
                 GET NAMES OF USERS
@@ -95,12 +94,12 @@ def main():
     # dictionary
     '''
     create a dictionary
-    create a dictionary of players names - asking the user for their names, as keys
-    with the initial player score values, as values
+    create a dictionary of players names - asking the user for their names,
+    as keys with the initial player score values, as values
     '''
     player_dictionary = {}
     initial_score = 0
-    if num_players == 1:
+    if num_players <= 1:
         player_dictionary["Player 1"] = getStringInput("What is your name")
         print(player_dictionary)
     else:
@@ -114,6 +113,7 @@ def main():
     '''
     theApp = App()
     theApp.on_execute(numGames, player_dictionary)
+
 
 '''
 THIS IS HOW WE START THE PROGRAM
