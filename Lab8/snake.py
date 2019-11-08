@@ -100,8 +100,7 @@ def main():
     player_dictionary = {}
     initial_score = 0
     if num_players <= 1:
-        player_dictionary["Player 1"] = getStringInput("What is your name")
-        print(player_dictionary)
+        player_dictionary[getStringInput("What is your name")] = initial_score
     else:
         i = 1
         while i < num_players+1:
