@@ -104,8 +104,8 @@ def main():
     else:
         i = 1
         while i < num_players+1:
-            question = "Player "+str(i)+", What is your name?: "
-            player_dictionary[getStringInput(question)] = initial_score
+            ask_player = "Player "+str(i)+", What is your name?: "
+            player_dictionary[getStringInput(ask_player)] = initial_score
             i += 1
     '''
     to call the game using a dictionary uncomment these next 2 lines:
