@@ -1,5 +1,5 @@
 # ScriptName: main.py
-# Author: Jason Quinlan
+# Author: Conor Fox 119322236
 
 # template for calling functions in another file
 
