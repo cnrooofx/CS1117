@@ -24,9 +24,28 @@ def main():
     print(to_english(70))  # -> Seventy
     print(to_english(-1))  # -> Minus one
     i = -999
-    while i < 251:
+    while i < 1000:
         print(to_english(i))
         i += 1
+    '''
+    '''
+    print(sort_a_list([2, -3]))  # -> [-3,2]
+    print(sort_a_list([2, 3, 2]))  # -> [2,3]
+    print(sort_a_list([2, 3, 1]))  # -> [1,2,3]
+    print(sort_a_list(['z', 'a']))  # -> ['a', 'z']
+    print(sort_a_list(['H', 'B']))  # -> ['B', 'H']
+    print(sort_a_list(['a', 'B']))  # -> ['B', 'a']
+    '''
+    print(sort_a_list([1, 3, 6, 8, 3, 2, 0]))
+    print(sort_a_list(["a", "j", "d", "g", "e", "f", "g", "r"]))
+    print(sort_a_list(["A", "j", "d", "G", "e", "f", "g", "r"]))
+    '''
+    print(ascii_difference([1, 2], [3, 4]))  # -> ([100, 102], [2, 2])
+    print(ascii_difference(['a', 2], [3,4]))  # -> ([148, 102], [46, 2])
+    print(ascii_difference([1,'b'], [3,4]))  # -> ([100, 150], [2, 46])
+    print(ascii_difference(['1', '2', '3'], []))  # -> ([49, 50, 51], [49, 50, 51])
+    print(ascii_difference([1,2], [3,'C']))  # -> ([100, 117], [2, 17])
+    print(ascii_difference(['a','b'], ['z','d']))  # -> ([219, 198], [25, 2])
     '''
 
 
