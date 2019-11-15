@@ -7,7 +7,7 @@
 def to_english(n=0):
     """
     Takes an integer between -999 and 999 inclusive, returns that number
-    in english
+    translated to English
     n -- Integer, -999 <= n <= 999
     return -- English translation of the number
     """

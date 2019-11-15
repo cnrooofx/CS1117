@@ -38,9 +38,9 @@ def main():
     print(sort_a_list([1, 3, 6, 8, 3, 2, 0]))
     print(sort_a_list(["a", "j", "d", "g", "e", "f", "g", "r"]))
     print(sort_a_list(["A", "j", "d", "G", "e", "f", "g", "r"]))
-    '''
     print(sort_a_list(['M', 'p', 'V', 'Z', 'V', 'q', 'D', 'q', 'B', 'B',
                        'n', 'k', 'H', 'm', 'p', 'K', 'W', 'j', 'Y', 'Z']))
+    '''
     '''
     print(ascii_difference([1, 2], [3, 4]))  # -> ([100, 102], [2, 2])
     print(ascii_difference(['a', 2], [3, 4]))  # -> ([148, 102], [46, 2])
@@ -49,6 +49,8 @@ def main():
     print(ascii_difference([1, 2], [3, 'C']))  # -> ([100, 117], [2, 17])
     print(ascii_difference(['a', 'b'], ['z', 'd']))  # -> ([219, 198], [25, 2])
     '''
+    print(ascii_difference([1, 2], [3, 4]))
+    print(ascii_difference(['a', 2], [3, 4]))
 
 
 if __name__ == "__main__":
