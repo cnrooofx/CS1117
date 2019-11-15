@@ -65,3 +65,25 @@ Error Checking
   - Returns a new list, which is a combination of list1 and list2.
 - remove
   - Returns the list with the first occurrence of value removed from list.
+  
+ ## Lab 7
+  
+ - is_stairs
+    - Tests if the inputted list s is a stairs (each number is one greater than the previous number or each number is one smaller than the previous number)
+ - factorial
+   - Takes a positive number as input and returns the factorial.
+ - gremlins
+   - Who knows?
+   
+  ## Lab 8
+  
+  - Snake Game
+  
+  ## Labs 9 & 10 - Continuous Assessment
+  
+  - to_english
+    - Takes an integer between -999 and 999 inclusive, returns that number translated to English
+  - sort_a_list
+    - Takes a list s and sorts it from smallest value to biggest value
+  - ascii_difference
+    - Returns two lists, the first with the combined ascii value of the elements at the same index number, the second list with the absolute ascii difference between each element at the same index number
