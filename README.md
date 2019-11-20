@@ -48,7 +48,7 @@ Error Checking
 - extra
   - pos\_factorial
   - neg\_factorial
-  
+
 ## Lab 6
 
 - count
@@ -65,22 +65,22 @@ Error Checking
   - Returns a new list, which is a combination of list1 and list2.
 - remove
   - Returns the list with the first occurrence of value removed from list.
-  
- ## Lab 7
-  
+
+## Lab 7
+
  - is_stairs
     - Tests if the inputted list s is a stairs (each number is one greater than the previous number or each number is one smaller than the previous number)
  - factorial
    - Takes a positive number as input and returns the factorial.
  - gremlins
    - Who knows?
-   
-  ## Lab 8
-  
+
+## Lab 8
+
   - Snake Game
-  
-  ## Labs 9 & 10 - Continuous Assessment
-  
+
+## Labs 9 & 10 - Continuous Assessment
+
   - to_english
     - Takes an integer between -999 and 999 inclusive, returns that number translated to English
   - sort_a_list
