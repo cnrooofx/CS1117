@@ -2,7 +2,9 @@
 
 _My lab files from the CS1117 module_
 
-## Lab 1
+## Semester 1
+
+### Lab 1
 
 - average\_ages
 - what\_is\_my\_name
@@ -10,7 +12,7 @@ _My lab files from the CS1117 module_
 
 Error Checking
 
-## Lab 2
+### Lab 2
 
 - rugby\_world\_cup
 - maths
@@ -23,7 +25,7 @@ Error Checking
 
 Error Checking
 
-## Lab 3
+### Lab 3
 
 - functions
   - three\_numbers
@@ -32,7 +34,7 @@ Error Checking
   - equal\_numbers
   - fizz\_buzz
 
-## Lab 4
+### Lab 4
 
 - functions
   - seasons - revised
@@ -41,7 +43,7 @@ Error Checking
   - slice\_reverse
   - add\_to\_list
 
-## Lab 5
+### Lab 5
 
 - functions
   - while\_loop
@@ -49,7 +51,7 @@ Error Checking
   - pos\_factorial
   - neg\_factorial
 
-## Lab 6
+### Lab 6
 
 - count
   - Return the number of times value occurs in the list.
@@ -66,7 +68,7 @@ Error Checking
 - remove
   - Returns the list with the first occurrence of value removed from list.
 
-## Lab 7
+### Lab 7
 
  - is_stairs
     - Tests if the inputted list s is a stairs (each number is one greater than the previous number or each number is one smaller than the previous number)
@@ -75,11 +77,11 @@ Error Checking
  - gremlins
    - Who knows?
 
-## Lab 8
+### Lab 8
 
   - Snake Game
 
-## Labs 9 & 10 - Continuous Assessment
+### Labs 9 & 10 - Continuous Assessment
 
   - to_english
     - Takes an integer between -999 and 999 inclusive, returns that number translated to English
@@ -87,3 +89,9 @@ Error Checking
     - Takes a list s and sorts it from smallest value to biggest value
   - ascii_difference
     - Returns two lists, the first with the combined ascii value of the elements at the same index number, the second list with the absolute ascii difference between each element at the same index number
+
+## Semester 1
+
+### Lab 1
+
+Redo of Labs 3 & 4
