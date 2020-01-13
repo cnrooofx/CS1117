@@ -5,8 +5,7 @@
 def three_numbers(number_1, number_2, number_3):
     if number_1 == number_2 == number_3:
         return True
-    else:
-        return False
+    return False
 
 
 def seasons(number):
@@ -14,7 +13,5 @@ def seasons(number):
     if isinstance(number, int):
         if number in seasons:
             return seasons[number]
-        else:
-            return "Number entered, "+str(number)+", is outside of input values"
-    else:
-        return "Input value must be a number"
+        return "Number entered, "+str(number)+", is outside of input values"
+    return "Input value must be a number"
