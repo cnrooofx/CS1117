@@ -10,7 +10,7 @@ def three_numbers(number_1, number_2, number_3):
 
 def seasons(number):
     seasons = {1: "Spring", 2: "Summer", 3: "Autumn", 4: "Winter"}
-    if isinstance(number, int):
+    if type(number) == int:
         if number in seasons:
             return seasons[number]
         return "Number entered, "+str(number)+", is outside of input values"
