@@ -59,6 +59,5 @@ def slice_reverse(input_value):
 def add_to_list(value, the_list):
     if value not in the_list:
         the_list.append(value)
-        print(the_list)
     the_list.sort()
     return the_list
