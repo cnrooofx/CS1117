@@ -56,12 +56,7 @@ def slice_reverse(input_value):
     return False
 
 
-<<<<<<< HEAD
 def add_to_list(value, the_list):
-=======
-def add_to_list(value, list):
-    the_list = list
->>>>>>> 21676733e563153d7c8592c64e62ef3dccf0dd40
     if value not in the_list:
         the_list.append(value)
         print(the_list)
