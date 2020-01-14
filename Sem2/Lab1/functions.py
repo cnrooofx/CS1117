@@ -13,11 +13,13 @@ def seasons(number):
     if type(number) == int:
         if number in seasons:
             return seasons[number]
-        return "Number entered, "+str(number)+", is outside of input values"
+        return "Number entered, " + str(number) + ", is outside of input values"
     return "Input value must be a number"
 
 
 def grades(score):
+    grade = {"A": "85-100", "B": "70-84", "C": "55-69", "D": "40-54",
+             "E": "25-39", "F": "0-24"}
     if type(score) == int:
         if score >= 0 and score <= 24:
             return "F"
@@ -33,8 +35,6 @@ def grades(score):
             return "A"
         return "The input numerical grade is outside the supported range."
     elif type(score) == str:
-        grade = {"A": "85-100", "B": "70-84", "C": "55-69", "D": "40-54",
-                 "E": "25-39", "F": "0-24"}
         if score in grade:
             return grade[score]
         return "The input letter grade is outside the supported range."
@@ -42,7 +42,23 @@ def grades(score):
 
 
 def slice_reverse(input_value):
-    input_value = str(input_value)
-    if input_value == input_value[::-1]:
+    if type(input_value) == list or type(input_value) == tuple:
+        i = 0
+        to_reverse = ""
+        while i < len(input_value):
+            to_reverse += str(input_value[i])
+            i += 1
+    else:
+        to_reverse = str(input_value)
+    to_reverse = to_reverse.lower()
+    if to_reverse == to_reverse[::-1]:
         return True
     return False
+
+
+def add_to_list(value, the_list):
+    if value not in the_list:
+        the_list.append(value)
+        print(the_list)
+    the_list.sort()
+    return the_list
