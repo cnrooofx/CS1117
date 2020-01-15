@@ -30,7 +30,8 @@ def main():
     # print(functions.grades(99))
     # print(functions.grades(300))
     # print(functions.slice_reverse(" ", ))
-    print(functions.add_to_list(5, [1, 3, 7, 9]))
+    # print(functions.add_to_list(5, [1, 3, 7, 9]))
+    print(functions.three_numbers(4, 5, "A"))
 
 
 if __name__ == "__main__":

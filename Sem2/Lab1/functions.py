@@ -14,7 +14,7 @@ def seasons(number):
         if number in seasons:
             return seasons[number]
         return "Number entered, " + str(number) + ", is outside of input values"
-    return "Input value must be a number"
+    return "Input value must be a number between 1 and 4"
 
 
 def grades(score):
