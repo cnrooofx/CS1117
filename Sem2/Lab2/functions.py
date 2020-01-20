@@ -24,7 +24,7 @@ def F(s1, s2):
 
 # 3 (a)
 def reducedFeeEntitlement(d):
-    return [key for key in d if len(d[key]) <= 2]
+    return [student for student in d if len(d[student]) < 2]
 
 
 # 3 (b)
@@ -45,7 +45,7 @@ def iter_factorial(n):
 # 5
 def fizz_buzz():
     i = 1
-    while i < 101:
+    while i <= 100:
         if i % 3 == 0 and i % 5 == 0:
             print("FizzBuzz")
         elif i % 3 == 0:
