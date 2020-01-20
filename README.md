@@ -90,8 +90,23 @@ Error Checking
   - ascii_difference
     - Returns two lists, the first with the combined ascii value of the elements at the same index number, the second list with the absolute ascii difference between each element at the same index number
 
-## Semester 1
+## Semester 2
 
 ### Lab 1
 
-Redo of Labs 3 & 4
+Redo of Labs 3 & 4    
+
+- three_numbers
+- seasons
+- grades
+- slice_reverse
+- add_to_list
+
+### Lab 2
+
+- power
+- F
+- reducedFeeEntitlement
+- commonModules
+- iter_factorial
+- fizz_buzz
