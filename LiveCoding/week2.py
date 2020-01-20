@@ -1,5 +1,5 @@
 # Live Coding Class
-# 20/01/20
+# Mon 20/01/20
 
 
 def all_pairs(s1=[], s2=[]):
