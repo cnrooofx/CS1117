@@ -47,10 +47,11 @@ def proteins(rna, codon_map):
 
 
 def tenkSteps(stepData):
+    # List of total steps of all employees per day
     day_total = []
     counter = 0
-    for index in range(len(stepData)):
-        for steps in stepData[index]:
+    for employee in stepData:
+        for index, steps in enumerate(employee):
             if index not in range(len(day_total)):
                 day_total.append(steps)
                 continue
@@ -58,19 +59,19 @@ def tenkSteps(stepData):
     for count_day in day_total:
         if count_day > 100000:
             counter += 1
-    return counter, day_total
+    return counter
 
 
 def mostSteps(stepData):
     # List of employee totals for the week
     week_total = []
-    # Employee number in range of employee numbers
-    for employee in range(len(stepData)):
-        for day in stepData[employee]:
+    for employee, steps_list in enumerate(stepData):
+        for day in steps_list:
             # If employee number isn't already an index, append the value
             if employee not in range(len(week_total)):
                 week_total.append(day)
                 continue
             # Otherwise add that day to the existing value in the list
             week_total[employee] += day
-    return week_total
+    # Return the employee with the highest weekly total
+    return week_total.index(max(week_total))
