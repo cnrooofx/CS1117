@@ -116,5 +116,9 @@ def mostSteps(stepData):
                 continue
             # Otherwise add that day to the existing value in the list
             week_total[employee] += day
-    # Return the employee with the highest weekly total
-    return week_total.index(max(week_total))
+    # Return the number of the employee with the highest weekly step total
+    highest_steps = 0
+    for steps in week_total:
+        if steps > highest_steps:
+            highest_steps = steps
+    return week_total.index(highest_steps)
