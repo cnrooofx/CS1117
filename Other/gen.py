@@ -32,5 +32,12 @@ def rand_ascii_list(length=10, upper=True, lower=True):
             i += 1
     return rand_list
 
+def list_of_lists(lists=5, length=10, start=0, end=100):
+    out = []
+    while lists > 0:
+        out.append(rand_int_list(length, start, end))
+        lists -= 1
+    return out
 
-print(rand_ascii_list(length=30, upper=False, lower=True))
+
+print(list_of_lists(10, 5, 9000, 11000))
