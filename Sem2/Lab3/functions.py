@@ -99,13 +99,13 @@ def tenkSteps(stepData):
     # Loop through each employee in the table
     for employee in stepData:
         # Index is employee number, get employees steps for the week
-        for index, steps in enumerate(employee):
+        for day, steps in enumerate(employee):
             # If day isn't already an index, append the value
-            if index not in range(len(day_total)):
+            if day not in range(len(day_total)):
                 day_total.append(steps)
                 continue
             # Otherwise add steps to the existing day in the list
-            day_total[index] += steps
+            day_total[day] += steps
     # Counter for days with over 100,000 steps
     for count_day in day_total:
         if count_day > 100000:
