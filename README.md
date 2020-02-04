@@ -1,3 +1,5 @@
+[![CodeFactor](https://www.codefactor.io/repository/github/cnrooofx/cs1117/badge?s=e8db8c7a79851d7b3e25d70604e96d7d87f56f56)](https://www.codefactor.io/repository/github/cnrooofx/cs1117)
+
 # CS1117
 
 _My lab files from the CS1117 module_
