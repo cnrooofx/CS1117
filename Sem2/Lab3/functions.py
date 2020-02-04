@@ -14,14 +14,32 @@ def hailStone(n):
     Generates the hailstone sequence of a given positive number n. If n is
     even, the next value is n/2. If n is odd, the next value is 3n + 1.
     """
+    out = []
     while n > 1:
-        print(n)
+        # Add the number to the output list
+        out.append(n)
+        # Check if even or odd
         if n % 2 == 0:
             n //= 2
         else:
             n = (3 * n + 1)
     else:
-        print(n)
+        # When the loop finishes n will be 1, append that to the list
+        out.append(n)
+    return out
+
+# Recursive
+
+# def hailStone(n):
+#     print(n)
+#     if n == 1:
+#         return
+#
+#     elif n % 2 == 0:
+#         n //= 2
+#     else:
+#         n = (3 * n + 1)
+#     hailStone(n)
 
 # 3
 def hexToBinary(hex, d={'0': '0000', '1': '0001', '2': '0010', '3': '0011',
@@ -35,7 +53,7 @@ def hexToBinary(hex, d={'0': '0000', '1': '0001', '2': '0010', '3': '0011',
     Accepts a hex string and returns the corresponding binary string value.
     """
     # Creates a list of the binary digits and joins them into a string.
-    return "".join([d[val] for val in hex])
+    return "".join([d[digit] for digit in hex if digit in d])
 
 # 4
 def proteins(rna, codon_map={'AUG': 'Methionine', 'UUU': 'Phenylalanine',
