@@ -2,12 +2,16 @@
 # Author: Conor Fox 119322236
 
 # 1
+
+
 def removeVowels(sentence):
     vowels = "aeiou"
     filtered_list = [l for l in sentence if l not in vowels]
     return " ".join(filtered_list)
 
 # 2
+
+
 def hailStone(n):
     """
     n -- Positive integer
@@ -28,20 +32,9 @@ def hailStone(n):
         out.append(n)
     return out
 
-# Recursive
-
-# def hailStone(n):
-#     print(n)
-#     if n == 1:
-#         return
-#
-#     elif n % 2 == 0:
-#         n //= 2
-#     else:
-#         n = (3 * n + 1)
-#     hailStone(n)
-
 # 3
+
+
 def hexToBinary(hex, d={'0': '0000', '1': '0001', '2': '0010', '3': '0011',
                         '4': '0100', '5': '0101', '6': '0110', '7': '0111',
                         '8': '1000 ', '9': '1001', 'A': '1010', 'B': '1011',
@@ -56,6 +49,8 @@ def hexToBinary(hex, d={'0': '0000', '1': '0001', '2': '0010', '3': '0011',
     return "".join([d[digit] for digit in hex if digit in d])
 
 # 4
+
+
 def proteins(rna, codon_map={'AUG': 'Methionine', 'UUU': 'Phenylalanine',
                              'UUC': 'Phenylalanine', 'UUA': 'Leucine',
                              'UUG': 'Leucine', 'UCU': 'Serine',
@@ -88,6 +83,8 @@ def proteins(rna, codon_map={'AUG': 'Methionine', 'UUU': 'Phenylalanine',
     return rna_list, protein_list
 
 # 5
+
+
 def tenkSteps(stepData):
     """
     stepData -- Table (list of lists) with employees step counts for the week.
