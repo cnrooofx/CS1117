@@ -28,6 +28,4 @@ def list_of_lists(lists=5, length=10, start=0, end=100):
             for j in range(lists)]
 
 
-# print(list_of_lists(1, 5, 9000, 11000))
-
-print(rand_ascii_list(length=10, upper=True, lower=True))
+print(list_of_lists(1, 5, 9000, 11000))
