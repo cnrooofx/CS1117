@@ -27,7 +27,7 @@ def is_subsequence(s1, s2):
     out = False
     error = False
     indexes = []
-    sorted = []
+    sorted_list = []
     try:
         if s1 in s2:
             out = True
@@ -36,10 +36,10 @@ def is_subsequence(s1, s2):
                 if letter not in s2:
                     break
                 indexes.append(s2.index(letter))
-                sorted.append(s2.index(letter))
+                sorted_list.append(s2.index(letter))
             else:
-                sorted.sort()
-                if indexes == sorted:
+                sorted_list.sort()
+                if indexes == sorted_list:
                     out = True
 
     except:
