@@ -35,11 +35,7 @@ def repeat(a_list, n):
     error = False
     list_copy = []
     try:
-        for number in a_list:
-            i = 0
-            while i < n:
-                list_copy.append(number)
-                i += 1
+        list_copy = [val for val in a_list for _ in range(n)]
     except:
         error = True
         list_copy = [-1]
@@ -58,6 +54,11 @@ def self_repeat(a_list):
     return error, new_list
 
 
+# def repeated(a_list):
+
+
+
+
 print(self_repeat([2, 1, 3]))
 # print(repeat(["a", "b", "c"], 4))
-# print(self_repeat([-2, 1, 3]))
+# print(repeat([1,2,3], 2))
