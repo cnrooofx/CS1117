@@ -1,9 +1,8 @@
 # Script Name: functions.py
 # Author: Conor Fox 119322236
 
+
 # 1
-
-
 def chooseLargest(a, b):
     # return list(map(max, zip(a, b)))
     return list(map(lambda x: x, map(max, zip(a, b))))
@@ -59,14 +58,19 @@ def client_matcher(client):
     file = open('clients.txt', 'r')
     clients = {person[0]: person[1:] for person in [
         line.strip('\n').split(',') for line in file.readlines()]}
+    file.close()
+    client_seek_gender = clients[client][2]
+    client_gender = clients[client][0]
+    client_seek_age = range(int(clients[client][3]), int(clients[client][4]))
     for person in clients:
+        seek_gender = clients[person][2]
         gender = clients[person][0]
-        seek_gender = clients[client][2]
         age = range(int(clients[person][3]), int(clients[person][4]))
-        seek_age = range(int(clients[client][3]), int(clients[client][4]))
         if person == client:
             continue
-        elif gender == seek_gender and age in seek_age:
-            match += person
-            print(person, clients[person][0], client, clients[client][2])
+        elif client_seek_gender == gender and seek_gender == client_gender:
+            for i in age:
+                if i in client_seek_age:
+                    match += ['%s should meet %s' % (client, person)]
+                    break
     return match

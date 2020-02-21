@@ -14,11 +14,11 @@ def main():
     # l2 = [2, 2, 9, 0, 9]
     # print(functions.chooseLargest(l1, l2))
     # print(functions.read_draw())
-    # print(type(functions.read_draw()[0][0]))
+    print(functions.read_draw())
     # print(functions.onek_deliveries(courierData))
     # print(functions.most_deliveries(courierData))
     # print(functions.append_list())
-    print(functions.client_matcher('Alison Jones'))
+    # print(functions.client_matcher('Alison Jones'))
 
 
 if __name__ == "__main__":
