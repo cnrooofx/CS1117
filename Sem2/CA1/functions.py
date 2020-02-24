@@ -34,3 +34,35 @@ def fractions(DNA):
         return c, g, t, a
     else:
         return "input must be a string character"
+
+
+# 2
+def F(S1, S2):
+    R = []
+    for e1 in S1:
+        for e2 in S2:
+            if e1 == e2:
+                R += [e1]
+                break
+    return R
+
+
+# (a)
+def F_while(S1, S2):
+    R = []
+    i = 0
+    while i < len(S1):
+        j = 0
+        while j < len(S2):
+            if S1[i] == S2[j]:
+                R += [S1[i]]
+                break
+            j += 1
+        i += 1
+    return R
+
+
+# (b)
+def F_list_comp(S1, S2):
+    return [e1 for e1 in S1 for e2 in S2 if e1 == e2]
+
