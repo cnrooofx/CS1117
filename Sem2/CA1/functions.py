@@ -66,3 +66,11 @@ def F_while(S1, S2):
 def F_list_comp(S1, S2):
     return [e1 for e1 in S1 for e2 in S2 if e1 == e2]
 
+
+# 4
+def firsts(s):
+    out = ''
+    for char in str(s):
+        if char not in out:
+            out += char
+    return out
