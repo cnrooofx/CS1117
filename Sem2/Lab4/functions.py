@@ -62,15 +62,15 @@ def client_matcher(client):
     client_seek_gender = clients[client][2]
     client_gender = clients[client][0]
     client_seek_age = range(int(clients[client][3]), int(clients[client][4]))
+    client_age = int(clients[client][1])
     for person in clients:
         seek_gender = clients[person][2]
         gender = clients[person][0]
-        age = range(int(clients[person][3]), int(clients[person][4]))
+        age_range = range(int(clients[person][3]), int(clients[person][4]))
+        age = int(clients[person][1])
         if person == client:
             continue
         elif client_seek_gender == gender and seek_gender == client_gender:
-            for i in age:
-                if i in client_seek_age:
-                    match += ['%s should meet %s' % (client, person)]
-                    break
+            if age in client_seek_age and client_age in age_range:
+                match += ['%s should meet %s' % (client, person)]
     return match
