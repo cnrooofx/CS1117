@@ -67,6 +67,21 @@ def F_list_comp(S1, S2):
     return [e1 for e1 in S1 for e2 in S2 if e1 == e2]
 
 
+# 3
+def frequencies(s):
+    out_dict = {}
+    if type(s) == list or type(s) == str:
+        s = list(s)
+        s.sort()
+        for val in s:
+            if val not in out_dict:
+                out_dict[val] = 1
+            else:
+                out_dict[val] += 1
+        return out_dict
+    return "input is incorrect"
+
+
 # 4
 def firsts(s):
     out = ''
