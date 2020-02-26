@@ -5,7 +5,7 @@
 
 # 1
 def fractions(DNA):
-    if type(DNA) == str:
+    if isinstance(DNA, str):
         c = 0.0
         g = 0.0
         t = 0.0
@@ -17,23 +17,21 @@ def fractions(DNA):
                 dna_string += char
         if dna_string != '':
             length = len(dna_string)
-            count = [0, 0, 0, 0]
             for char in dna_string:
                 if char == 'C':
-                    count[0] += 1
+                    c += 1
                 elif char == 'G':
-                    count[1] += 1
+                    g += 1
                 elif char == 'T':
-                    count[2] += 1
+                    t += 1
                 else:
-                    count[3] += 1
-            c = count[0] / length
-            g = count[1] / length
-            t = count[2] / length
-            a = count[3] / length
+                    a += 1
+            c /= length
+            g /= length
+            t /= length
+            a /= length
         return c, g, t, a
-    else:
-        return "input must be a string character"
+    return "input must be a string character"
 
 
 # 2
@@ -70,7 +68,7 @@ def F_list_comp(S1, S2):
 # 3
 def frequencies(s):
     out_dict = {}
-    if type(s) == list or type(s) == str:
+    if isinstance(s, (str, list)):
         s = list(s)
         s.sort()
         for val in s:
