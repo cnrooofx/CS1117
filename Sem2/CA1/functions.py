@@ -12,7 +12,6 @@ def fractions(DNA):
         a = 0.0
         dna_string = ''
         for char in DNA:
-            char = char.upper()
             if char in ('C', 'G', 'T', 'A'):
                 dna_string += char
         if dna_string != '':
@@ -31,7 +30,7 @@ def fractions(DNA):
             t /= length
             a /= length
         return c, g, t, a
-    return "input must be a string character"
+    return 'input must be a string character'
 
 
 # 2
@@ -82,8 +81,26 @@ def frequencies(s):
 
 # 4
 def firsts(s):
+    if type(s) == list:
+        s = ''.join([str(item) for item in s])
     out = ''
     for char in str(s):
         if char not in out:
             out += char
     return out
+
+
+# 5
+def extract(text, n, m):
+    hidden = ''
+    text = text.split()
+    i = int(m)
+    while i < len(text):
+        word = text[i-1]
+        for to_strip in ('.', ',', '!', '?'):
+            word.strip(to_strip)
+        if (n-1) not in range(len(word)):
+            return 'There is no character %s in the word - %s' % (n, word)
+        hidden += word[n-1]
+        i += m
+    return hidden
