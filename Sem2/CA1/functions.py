@@ -64,24 +64,30 @@ def F_list_comp(S1, S2):
     return [e1 for e1 in S1 for e2 in S2 if e1 == e2]
 
 
+# (c)
+def F_lambda(S1, S2):
+    out = []
+    to_sort = map(lambda x: x[0], filter(lambda x: x[0] == x[1], [(e1, e2) for e1 in S1 for e2 in S2]))
+    for item in to_sort:
+        if out.count(item) < S1.count(item):
+            out.append(item)
+    return out
+
 # 3
 def frequencies(s):
-    out_dict = {}
     if isinstance(s, (str, list)):
         s = list(s)
         s.sort()
+        out_dict = {val: 0 for val in s}
         for val in s:
-            if val not in out_dict:
-                out_dict[val] = 1
-            else:
-                out_dict[val] += 1
+            out_dict[val] += 1
         return out_dict
     return "input is incorrect"
 
 
 # 4
 def firsts(s):
-    if type(s) == list:
+    if isinstance(s, list):
         s = ''.join([str(item) for item in s])
     out = ''
     for char in str(s):
