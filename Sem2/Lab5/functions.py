@@ -20,3 +20,20 @@ def hailStoneR(n):
     else:
         n = (3 * n + 1)
     return start + hailStoneR(n)
+
+
+# 3
+def chooseLargest(a, b):
+    results = []
+    list_len = len(a)
+    for i in range(list_len):
+        results.append(max(a[i], b[i]))
+    print(results)
+
+
+def chooseLargest_comp(a, b):
+    return [max(a[i], b[i]) for i in range(len(a))]
+
+
+def chooseLargest_lambda(a, b):
+    return list(map(lambda x: max(x), zip(a, b)))
