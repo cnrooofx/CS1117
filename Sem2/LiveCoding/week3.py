@@ -1,33 +1,27 @@
 # Live Coding Class
-# Mon 03/02/20
+# Mon 27/01/20
 
-def num_digits(s1):
+
+def peaks(numlist):
     try:
-        number = str(s1)
-        negative = False
-        if number[0:1] == "-":
-            negative = True
-            number = number[1:]
-        if number[:2] == "0.":
-            number = number[1:]
-        length = len(number)
-        if negative:
-            length *= -1
-        return False, length
+        if len(numlist) == 0:
+            return False, []
+        out = [numlist[0]]
+        for element in numlist:
+            if element > max(out):
+                out.append(element)
+        return False, out
     except:
         return True, [-1]
 
 
-# create a function called:
-#   num_digits(s1)
-# with 1 parameters called:
-#   s1 - integer/float number
-# which determines how many digits are in the input number (including decimal place)
-# adding a minus before the output if a negative number is passed in
+# print(peaks([2, 5, 7, "a", 9, 1]))
+# print(peaks([3]))
+# print(peaks([]))
 
-print(num_digits(0))  # -> (False, 1)
-print(num_digits(12345))  # -> (False, 5)
-print(num_digits(12.3465))  # -> (False, 7)
-print(num_digits(.012))  # -> (False, 4)
-print(num_digits(-12.3454))  # -> (False, -7)
-print(num_digits(-.012))  # -> (False, -4)
+print(peaks([3, 2, 5, 5, 7, 6, 1, 8, 4]))  # -> (False, [3,5,7,8])
+print(peaks([1, 2, 3, 4, 5, 6, 7, 8, 9]))  # -> (False, [1,2,3,4,5,6,7,8,9])
+print(peaks([9, 8, 7, 6, 5, 4, 3, 2, 1]))  # -> (False, [9])
+print(peaks([5, 5, 5, 5, 5, 5, 5, 5, 5]))  # -> (False, [5])
+print(peaks([3]))  # -> (False, [3])
+print(peaks([]))  # -> (False, [])

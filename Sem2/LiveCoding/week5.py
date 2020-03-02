@@ -1,29 +1,21 @@
 # Live Coding Class
-# Mon 17/02/20
+# Mon 10/02/20
 
 # create a function called:
-#   repeat( a_list, n )
+#   is_subsequence( s1, s2 )
 # with 2 parameters called:
-#   a_list - list
-#   n - number
-# which takes a list of integers and a positive integer n, and returns a copy of list
-# with each element replicated n times.
+#   s1 - string
+#   s2 - string
+# which takes two sequence parameters and returns a Boolean stating whether or
+# not all the elements of S1 also occur in S2, in the same order but not
+# necessarily side-by-side
 
-# repeat([2,1,3], 4) -> (False, [2,2,2,2,1,1,1,1,3,3,3,3])
-
-
-# create a function called:
-#   self_repeat( a_list )
-# with 1 parameters called:
-#   a_list - list
-# which takes a list of integers, and returns a copy of list in which each
-# positive element n is replicated n times, and each non-positive element is
-# removed
-
-# SelfRepeat([2,1,3]) -> (False, [2,2,1,3,3,3])
-# SelfRepeat([2,-4,1,0,3]) -> (False, [2,2,1,3,3,3])
-# SelfRepeat([ ]) -> (False, [ ])
-
+# is_subsequence( "abc", "abcde" ) -> (False, True)
+# is_subsequence( "bce", "abcde" ) -> (False, True)
+# IsSubsequence( "bec", "abcde" ) -> (False, False)
+# IsSubsequence( "bfe", "abcde" ) -> (False, False)
+# IsSubsequence( "b", "abcde" ) -> (False, True)
+# IsSubsequence( "", "abcde" ) -> (False, True)
 
 # all functions return two values:
 # the first is a boolean to tell if an exception occurred
@@ -31,34 +23,35 @@
 # if an exception occurred
 
 
-def repeat(a_list, n):
+def is_subsequence(s1, s2):
+    out = False
     error = False
-    list_copy = []
+    indexes = []
+    sorted_list = []
     try:
-        list_copy = [val for val in a_list for _ in range(n)]
+        if s1 in s2:
+            out = True
+        else:
+            for letter in s1:
+                if letter not in s2:
+                    break
+                indexes.append(s2.index(letter))
+                sorted_list.append(s2.index(letter))
+            else:
+                sorted_list.sort()
+                if indexes == sorted_list:
+                    out = True
+
     except:
         error = True
-        list_copy = [-1]
-    return error, list_copy
+    return error, out, indexes
 
 
-def self_repeat(a_list):
-    error = False
-    new_list = []
-    for number in a_list:
-        error, repeated = repeat([number], number)
-        if not error:
-            new_list += repeated
-        else:
-            return error, [-1]
-    return error, new_list
+# print(is_subsequence('', 'abcde'))
 
-
-# def repeated(a_list):
-
-
-
-
-print(self_repeat([2, 1, 3]))
-# print(repeat(["a", "b", "c"], 4))
-# print(repeat([1,2,3], 2))
+print(is_subsequence("abc", "abcde"))  # -> (False, True)
+print(is_subsequence("bce", "abcde"))  # -> (False, True)
+print(is_subsequence("bec", "abcde"))  # -> (False, False)
+print(is_subsequence("bfe", "abcde"))  # -> (False, False)
+print(is_subsequence("b", "abcde"))  # -> (False, True)
+print(is_subsequence("", "abcde"))  # -> (False, True)
