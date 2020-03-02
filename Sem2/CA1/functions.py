@@ -66,12 +66,7 @@ def F_list_comp(S1, S2):
 
 # (c)
 def F_lambda(S1, S2):
-    out = []
-    to_sort = map(lambda x: x[0], filter(lambda x: x[0] == x[1], [(e1, e2) for e1 in S1 for e2 in S2]))
-    for item in to_sort:
-        if out.count(item) < S1.count(item):
-            out.append(item)
-    return out
+    return list(filter(lambda e1: e1 in S2, S1))
 
 # 3
 def frequencies(s):
