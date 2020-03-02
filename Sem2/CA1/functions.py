@@ -61,7 +61,7 @@ def F_while(S1, S2):
 
 # (b)
 def F_list_comp(S1, S2):
-    return [e1 for e1 in S1 for e2 in S2 if e1 == e2]
+    return [e1 for e1 in S1 if e1 in S2]
 
 
 # (c)
