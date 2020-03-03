@@ -67,6 +67,21 @@ def F_list_comp(S1, S2):
 # (c)
 def F_lambda(S1, S2):
     return list(filter(lambda e1: e1 in S2, S1))
+    return list(filter(lambda e: e in S2, S1))
+
+
+# (d)
+def F_error(S1, S2):
+    if isinstance(S1, list) and isinstance(S2, list):
+        R = []
+        for e1 in S1:
+            for e2 in S2:
+                if e1 == e2:
+                    R += [e1]
+                    break
+        return R
+    return 'Error - input must be a list'
+
 
 # 3
 def frequencies(s):
