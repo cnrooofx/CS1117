@@ -1,45 +1,64 @@
 # Live Coding Class
-# Mon 24/02/20
+# Mon 17/02/20
 
 # create a function called:
-#   rotate(s, n)
+#   repeat( a_list, n )
 # with 2 parameters called:
-#   s - string
-#   n - integer
-# which takes a string s and an integer n, with 0 ≤ n < len(s), and returns a
-# copy of s rotated by n places
+#   a_list - list
+#   n - number
+# which takes a list of integers and a positive integer n, and returns a copy of list
+# with each element replicated n times.
 
+# repeat([2,1,3], 4) -> (False, [2,2,2,2,1,1,1,1,3,3,3,3])
 
-def rotate(s, n):
-    try:
-        if n >= 0:
-            return False, s[n:] + s[:n]
-        else:
-            return True, [-1]
-    except:
-        return True, [-1]
-
-
-print(rotate("abcde", 1))  # -> (False, "bcdea")
-print(rotate("abcde", 2))  # -> (False, "cdeab")
-print(rotate("abcde", 0))  # -> (False, "abcde")
-# print(rotate("Conor", 4))
 
 # create a function called:
-#   are_rotations(s1, s2)
-# with 2 parameters called:
-#   s1 - string
-#   s2 - string
-# which takes two string parameters and returns a Boolean stating whether or
-# not one is a rotation of the other
+#   self_repeat( a_list )
+# with 1 parameters called:
+#   a_list - list
+# which takes a list of integers, and returns a copy of list in which each
+# positive element n is replicated n times, and each non-positive element is
+# removed
 
-# are_rotations("abcde", "cdeab") -> (False, True)
-# are_rotations("abcde", "edcba") -> (False, False)
-# are_rotations("abcde", "abc") -> (False, False)
-# are_rotations("abaab", "aabab") -> (False, True)
+# SelfRepeat([2,1,3]) -> (False, [2,2,1,3,3,3])
+# SelfRepeat([2,-4,1,0,3]) -> (False, [2,2,1,3,3,3])
+# SelfRepeat([ ]) -> (False, [ ])
 
 
 # all functions return two values:
 # the first is a boolean to tell if an exception occurred
 # the second is output of the function, if no exception occurred, or [-1]
 # if an exception occurred
+
+
+def repeat(a_list, n):
+    error = False
+    list_copy = []
+    try:
+        list_copy = [val for val in a_list for _ in range(n)]
+    except:
+        error = True
+        list_copy = [-1]
+    return error, list_copy
+
+
+def self_repeat(a_list):
+    error = False
+    new_list = []
+    for number in a_list:
+        error, repeated = repeat([number], number)
+        if not error:
+            new_list += repeated
+        else:
+            return error, [-1]
+    return error, new_list
+
+
+# def repeated(a_list):
+
+
+
+
+print(self_repeat([2, 1, 3]))
+# print(repeat(["a", "b", "c"], 4))
+# print(repeat([1,2,3], 2))

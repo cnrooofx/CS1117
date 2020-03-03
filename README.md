@@ -110,3 +110,27 @@ Redo of Labs 3 & 4
 - commonModules
 - iter_factorial
 - fizz_buzz
+
+### Lab 3
+
+- removeVowels
+- hailStone
+  - Generates the hailstone sequence of a given positive number n. If n is even, the next value is n/2. If n is odd, the next value is 3n + 1.
+- hexToBinary
+  - Accepts a hex string and returns the corresponding binary string value.
+- proteins
+- **Employee Steps**
+  - tenkSteps
+  - mostSteps
+
+### Lab 4
+
+- chooseLargest
+- read_draw
+  - Reads lottery numbers from a file and creates a list for every draw.
+- **Deliveries**
+  - del_1000
+  - most_del
+- append_list
+- client_matcher
+  - Reads client data from a file and finds matches for the selected client-
