@@ -5,13 +5,13 @@
 
 # 1
 def fractions(DNA):
-    """
+    """gives fraction of DNA in the overall string
 
-    :param DNA: descr of arg1 that has True for default value
-    :returns: some value
+    :param DNA: input string or list to check
+    :returns: fraction of C, G, T, A in the input
     """
     # Checks that DNA is a non-empty string
-    if isinstance(DNA, str) and DNA:
+    if isinstance(DNA, (str, list)) and DNA:
         c = 0.0
         g = 0.0
         t = 0.0
@@ -94,7 +94,7 @@ def F_error(S1, S2):
 
 # 3
 def frequencies(s):
-    """Creates a dictionary with the count of each distinct item in a sequence
+    """creates a dictionary with the count of each distinct item in a sequence
 
     :param s: string or list to check
     :returns: sorted dictionary
