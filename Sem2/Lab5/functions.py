@@ -2,14 +2,22 @@
 # Author: Conor Fox 119322236
 
 
+# 1
+def factorialL(n):
+    if n == 1:
+        return 1
+    else:
+        return n * factorialL(n-1)
+
+
 # 2
 def hailStoneR(n):
-    print(n)
+    start = [n]
     if n == 1:
-        return
+        return [1]
     elif n % 2 == 0:
         n //= 2
     else:
         n = (3 * n + 1)
-    hailStoneR(n)
+    return start + hailStoneR(n)
 
