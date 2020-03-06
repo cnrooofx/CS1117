@@ -133,4 +133,20 @@ Redo of Labs 3 & 4
   - most_del
 - append_list
 - client_matcher
-  - Reads client data from a file and finds matches for the selected client-
+  - Reads client data from a file and finds matches for the selected client
+
+### Continuous Assessment 1
+
+- fractions
+  - fraction of C, G, T, A in the input string
+- F
+  - F_while
+  - F_list_comp
+  - F_lambda
+  - F_error
+- frequencies
+  - creates a sorted dictionary with the count of each distinct item in a sequence
+- firsts
+  - returns the string formed from the first occurrence of each item in the input
+- extract
+  - extracts a hidden message from a passage of text
