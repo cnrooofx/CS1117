@@ -38,3 +38,23 @@ def chooseLargest_comp(a, b):
 def chooseLargest_lambda(a, b):
     return list(map(lambda x: max(x), zip(a, b)))
 
+
+# 4
+def redact():
+    sensitive_words = open('sensitiveWords.txt', 'r')
+    words = [word.strip('\n').lower() for word in sensitive_words.readlines()]
+    sensitive_words.close()
+    out = open('redacted.txt', 'w')
+    to_redact = open('unredacted.txt', 'r')
+    for line in to_redact.readlines():
+        current_line = ''
+        for word in line.split():
+            if word.lower() in words:
+                current_line += (('*' * len(word)) + ' ')
+            else:
+                current_line += (word + ' ')
+        out.write(current_line + '\n')
+    print(words)
+    out.close()
+    to_redact.close()
+
