@@ -67,3 +67,13 @@ def sum_it():
             summation.append(n)
     return summation
 
+
+# 7
+def createDeck():
+    deck = []
+    for suit in ['s', 'h', 'd', 'c']:
+        for num in range(2, 10):
+            deck.append(str(num)+suit)
+        for card in ['T', 'J', 'Q', 'K', 'A']:
+            deck.append(card+suit)
+    return deck
