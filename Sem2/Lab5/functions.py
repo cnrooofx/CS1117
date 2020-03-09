@@ -58,3 +58,12 @@ def redact():
     out.close()
     to_redact.close()
 
+
+# 6
+def sum_it():
+    summation = []
+    for n in range(17):
+        if n > 10:
+            summation.append(n)
+    return summation
+

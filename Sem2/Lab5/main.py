@@ -10,7 +10,7 @@ def main():
     # functions.chooseLargest([1, 2, 3, 4, 5], [2, 2, 9, 0, 9])
     # print(functions.chooseLargest_comp([1, 2, 3, 4, 5], [2, 2, 9, 0, 9]))
     # print(functions.chooseLargest_lambda([1, 2, 3, 4, 5], [2, 2, 9, 0, 9]))
-    print(functions.redact())
+    # print(functions.redact())
 
 
 if __name__ == "__main__":
