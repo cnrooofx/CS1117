@@ -1,6 +1,8 @@
 # Script Name: functions.py
 # Author: Conor Fox 119322236
 
+import random
+
 
 # 1
 def factorialL(n):
@@ -77,3 +79,12 @@ def createDeck():
         for card in ['T', 'J', 'Q', 'K', 'A']:
             deck.append(card+suit)
     return deck
+
+
+def shuffle(deck):
+    for card in deck:
+        swap_index = random.randint(1, len(deck))
+        deck.pop(deck.index(card))
+        deck = deck[:swap_index] + [card] + deck[swap_index:]
+    return deck
+
