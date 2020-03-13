@@ -12,8 +12,9 @@ def main():
     # print(functions.chooseLargest_lambda([1, 2, 3, 4, 5], [2, 2, 9, 0, 9]))
     # print(functions.redact())
     # print(functions.sum_it())
-    deck = functions.createDeck()
-    print(functions.shuffle(deck))
+    # deck = functions.createDeck()
+    # print(functions.shuffle(deck))
+    print(functions.word_count())
 
 
 if __name__ == "__main__":

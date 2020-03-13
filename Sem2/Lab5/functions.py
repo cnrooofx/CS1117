@@ -2,6 +2,7 @@
 # Author: Conor Fox 119322236
 
 import random
+import string
 
 
 # 1
@@ -87,3 +88,23 @@ def shuffle(deck):
         deck = deck[:swap_index] + [card] + deck[swap_index:]
     return deck
 
+
+# 8
+def word_count():
+    book = open('book.txt', 'r')
+    wc = {}
+    for line in book.readlines():
+        for word in line.strip('\n').split():
+            word = ''.join(l for l in word if l not in string.punctuation)
+            word = word.lower()
+            if word not in wc:
+                wc[word] = 1
+            else:
+                wc[word] += 1
+    most = 0
+    most_word = ''
+    for key in wc:
+        if wc[key] > most:
+            most = wc[key]
+            most_word = key
+    return most_word, most
