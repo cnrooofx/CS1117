@@ -62,7 +62,28 @@ def redact():
     to_redact.close()
 
 
+# 5
+
+# x = list(map(lambda n1, n2: n1 - n2, [7, 8, 9], [3, 2, 1]))
+# print(x)
+"""
+ -  Map is taking the two lists and passing them as parameters n1, n2 to the
+    lambda function.
+
+ -  Map will iterate over the lists passing the values at the same index in
+    each list.
+
+ -  The lambda function takes the list items passed from map and subtracts
+    the item in the first list n1 from the item in the second list n2 and
+    returns the answer.
+
+ -  The output from the lambda function is saved in the map object which is
+    converted into a list which is then printed.
+"""
+
 # 6
+
+
 def sum_it():
     summation = []
     for n in range(17):
@@ -107,4 +128,4 @@ def word_count():
         if wc[key] > most:
             most = wc[key]
             most_word = key
-    return most_word, most
+    return most_word
