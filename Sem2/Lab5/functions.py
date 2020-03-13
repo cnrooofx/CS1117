@@ -73,10 +73,9 @@ def sum_it():
 # 7
 def createDeck():
     deck = []
+    cards = [str(num) for num in range(2, 10)] + ['T', 'J', 'Q', 'K', 'A']
     for suit in ['s', 'h', 'd', 'c']:
-        for num in range(2, 10):
-            deck.append(str(num)+suit)
-        for card in ['T', 'J', 'Q', 'K', 'A']:
+        for card in cards:
             deck.append(card+suit)
     return deck
 
