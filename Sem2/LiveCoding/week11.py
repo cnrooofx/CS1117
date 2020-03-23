@@ -11,7 +11,18 @@
 # and return a dictionary with the first words as keys and the corresponding
 # second words as values
 
-# print(read_dictionary('week11.txt'))
+
+def read_dictionary(filename):
+    filename = open('week11.txt', 'r')
+    out_dict = {}
+    for line in filename.readlines():
+        words = line.strip('\n').split()
+        out_dict[words[0]] = words[1]
+    return out_dict
+
+
+print(read_dictionary('week11.txt'))
+
 # create a function called:
 #   inverse( d )
 # with 1 parameters called:
