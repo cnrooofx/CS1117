@@ -21,7 +21,8 @@ def read_dictionary(filename):
     return out_dict
 
 
-print(read_dictionary('week11.txt'))
+# print(read_dictionary('week11.txt'))
+lang_dict = read_dictionary('week11.txt')
 
 # create a function called:
 #   inverse( d )
@@ -31,6 +32,16 @@ print(read_dictionary('week11.txt'))
 # For example, calling ‘Inverse’ on the above English-to-Irish dictionary
 # should produce the equivalent Irish-to-English dictionary:
 # { "uisce":"water", "crann":"tree", "grian":"sun", "capall":"horse" }
+
+
+def inverse(d):
+    dict_copy = {}
+    for key in d:
+        dict_copy[d[key]] = key
+    return dict_copy
+
+
+print(inverse(lang_dict))
 
 # create a function called:
 #   print_dictionary( d )
