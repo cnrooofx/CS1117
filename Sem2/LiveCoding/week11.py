@@ -13,11 +13,12 @@
 
 
 def read_dictionary(filename):
-    filename = open('week11.txt', 'r')
+    dict_file = open(filename, 'r')
     out_dict = {}
-    for line in filename.readlines():
+    for line in dict_file.readlines():
         words = line.strip('\n').split()
         out_dict[words[0]] = words[1]
+    dict_file.close()
     return out_dict
 
 
@@ -41,7 +42,7 @@ def inverse(d):
     return dict_copy
 
 
-print(inverse(lang_dict))
+# print(inverse(lang_dict))
 
 # create a function called:
 #   print_dictionary( d )
@@ -55,3 +56,13 @@ print(inverse(lang_dict))
 #       sun       : grian
 #       tree      : crann
 #       water     : uisce
+
+
+def print_dictionary(d):
+    out = ''
+    for key in sorted(d):
+        out += '\t%s\t : %s\n' % (key, d[key])
+    return out
+
+
+print(print_dictionary(lang_dict))
