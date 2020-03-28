@@ -39,7 +39,8 @@ def chooseLargest(a, b):
 
 
 def chooseLargest(a, b):
-    return list(map(lambda x: max(x), zip(a, b)))
+    return [max(a[i], b[i]) for i in range(len(a))]
+
 
 
 # 4
