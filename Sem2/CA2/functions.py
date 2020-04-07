@@ -26,7 +26,7 @@ def what_am_I(input_list, my_type='all'):
                         out[my_type] += [val]
         return out
     except:
-        return 'Error'
+        return 'Oops, there was an error in what_am_I'
 
 
 def who_am_I(file_input):
@@ -49,32 +49,36 @@ def who_am_I(file_input):
                     type_list.append(int(word))
         return what_am_I(type_list, my_type='all')
     except:
-        return 'Error'
+        return 'Oops, there was an error in who_am_I'
 
 
 def matrices(file_input):
-    matrix = []
-    with open(file_input, 'r') as my_file:
-        for line in my_file.readlines():
-            cur_line = []
-            for num in line.strip('\n').split(','):
-                num = num.strip()
-                cur_line.append(int(num))
-            matrix.append(cur_line)
-    rev_matrix = []
-    for i in range(len(matrix)):
-        rev_matrix.append([])
-    for row in matrix:
-        for ind, val in enumerate(row):
-            rev_matrix[ind].append(val)
-    return rev_matrix
+    try:
+        matrix = []
+        with open(file_input, 'r') as my_file:
+            for line in my_file.readlines():
+                cur_line = []
+                for num in line.strip('\n').split(','):
+                    num = num.strip()
+                    cur_line.append(int(num))
+                matrix.append(cur_line)
+        rev_matrix = [[] for i in range(len(matrix))]
+        for row in matrix:
+            for ind, val in enumerate(row):
+                rev_matrix[ind].append(val)
+        return rev_matrix
+    except:
+        return 'Oops, there was an error in matrices'
 
 
 def sum_me(matrices_list):
-    rows = [0 for i in range(len(matrices_list))]
-    columns = [0 for i in range(len(matrices_list[0]))]
-    for row_ind, row in enumerate(matrices_list):
-        for col_ind, val in enumerate(row):
-            rows[row_ind] += val
-            columns[col_ind] += val
-    return rows, columns
+    try:
+        rows = [0 for i in range(len(matrices_list))]
+        columns = [0 for i in range(len(matrices_list[0]))]
+        for row_ind, row in enumerate(matrices_list):
+            for col_ind, val in enumerate(row):
+                rows[row_ind] += val
+                columns[col_ind] += val
+        return rows, columns
+    except:
+        return 'Oops, there was an error in sum_me'
