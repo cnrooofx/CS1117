@@ -6,7 +6,9 @@
 def what_am_I(input_list, my_type='all'):
     try:
         out = {}
-        if len(input_list) > 0:
+        if my_type != 'all' and isinstance(my_type, str):
+            return out
+        elif len(input_list) > 0:
             if my_type != 'all':
                 my_type = str(my_type.__name__)
                 for val in input_list:
