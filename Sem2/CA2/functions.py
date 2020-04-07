@@ -68,3 +68,13 @@ def matrices(file_input):
         for ind, val in enumerate(row):
             rev_matrix[ind].append(val)
     return rev_matrix
+
+
+def sum_me(matrices_list):
+    rows = [0 for i in range(len(matrices_list))]
+    columns = [0 for i in range(len(matrices_list[0]))]
+    for row_ind, row in enumerate(matrices_list):
+        for col_ind, val in enumerate(row):
+            rows[row_ind] += val
+            columns[col_ind] += val
+    return rows, columns
