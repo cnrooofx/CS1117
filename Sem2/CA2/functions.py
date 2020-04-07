@@ -13,25 +13,24 @@ def what_am_I(input_list, my_type='all'):
     try:
         out = {}
         # If the my_type is a string and isn't all, return an empty dictionary
-        if my_type != 'all' and isinstance(my_type, str):
+        if my_type != 'all' and isinstance(my_type, str) or len(input_list) < 1:
             return out
-        elif len(input_list) > 0:
-            if my_type == 'all':
-                all = True
-            else:
-                # If my_type isn't all, add that type to the dictionary
-                out[str(my_type.__name__)] = []
-                # Set all to False, stops other types being added to dictionary
-                all = False
-            for val in input_list:
-                # Get the type of the current item in the list
-                my_type = type(val).__name__
-                # If the type is already in the dictionary, add it to that list
-                if my_type in out:
-                    out[my_type] += [val]
-                # Only add other types to the dictionary if all is set to True
-                elif all:
-                    out[my_type] = [val]
+        if my_type == 'all':
+            all_types = True
+        else:
+            # If my_type isn't all, add that type to the dictionary
+            out[str(my_type.__name__)] = []
+            # Set all to False, stops other types being added to dictionary
+            all_types = False
+        for val in input_list:
+            # Get the type of the current item in the list
+            my_type = type(val).__name__
+            # If the type is already in the dictionary, add it to that list
+            if my_type in out:
+                out[my_type] += [val]
+            # Only add other types to the dictionary if all is set to True
+            elif all_types:
+                out[my_type] = [val]
         return out
     except:
         return 'Oops, there was an error in what_am_I'
