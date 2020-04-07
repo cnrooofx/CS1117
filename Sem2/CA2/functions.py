@@ -36,7 +36,6 @@ def who_am_I(file_input):
         for line in my_file.readlines():
             for word in line.strip('\n').strip('[').strip(']').split(','):
                 word = word.strip()
-                print(word)
                 if word == 'True':
                     type_list.append(True)
                 elif word == 'False':
@@ -51,3 +50,21 @@ def who_am_I(file_input):
         return what_am_I(type_list, my_type='all')
     except:
         return 'Error'
+
+
+def matrices(file_input):
+    matrix = []
+    with open(file_input, 'r') as my_file:
+        for line in my_file.readlines():
+            cur_line = []
+            for num in line.strip('\n').split(','):
+                num = num.strip()
+                cur_line.append(int(num))
+            matrix.append(cur_line)
+    rev_matrix = []
+    for i in range(len(matrix)):
+        rev_matrix.append([])
+    for row in matrix:
+        for ind, val in enumerate(row):
+            rev_matrix[ind].append(val)
+    return rev_matrix
