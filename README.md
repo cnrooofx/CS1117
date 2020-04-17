@@ -150,3 +150,36 @@ Redo of Labs 3 & 4
   - returns the string formed from the first occurrence of each item in the input
 - extract
   - extracts a hidden message from a passage of text
+
+### Lab 5
+
+1. factorialL
+  - Recursive factorial
+2. hailStoneR
+  - Recursive hailstone
+3. chooseLargest
+  - Choose the largest number at each index in two lists
+    - chooseLargest_comp
+    - chooseLargest_lambda
+4. redact
+  - Redact phrases from a passage of text from a file
+5. Explain the function
+6. Rewrite to not use list comprehension
+7. Deck
+  - createDeck
+    - Create an abbreviated deck of cards
+  - shuffle
+    - Take a deck of cards and randomise the order
+8. word_count
+  - Returns the word that appears most often in a passage of text
+
+### Continuous Assessment 2
+
+1. what_am_I
+  - Creates a dictionary from elements in a list sorted by type
+2. who_am_I
+  - Creates a dictionary from elements in a file sorted by type
+3. matrices
+  - Takes a matrix in a file and reverses rows and columns
+4. sum_me
+  - Sums up rows and columns in a matrix
